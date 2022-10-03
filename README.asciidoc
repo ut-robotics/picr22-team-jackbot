@@ -37,9 +37,21 @@ BLOG
 Documentation of Team Jackbot activites:
 
 Ball thrower : Made by Karl Rahn, spent 12h doing it
-19.sept 3h of making sketches, watching tutorials and reccommendations for Fusion 360.
-21.sept 1h made fixes to sketches
-22.sept 3h finished sketches, made parts to assemble the ramp
-26.sept 3h assembled the thrower ramp, made some fixes
-03.okt 3h checked if the thrower ramp fit into the test robot assembly (it was ok).
+19.sept 
+3h of making sketches, watching tutorials and reccommendations for Fusion 360.
+
+21.sept
+1h made fixes to sketches
+
+22.sept
+3h finished sketches, made parts to assemble the ramp
+
+26.sept 
+3h assembled the thrower ramp, made some fixes
+
+03.okt 
+3h checked if the thrower ramp fit into the test robot assembly (it was ok).
+Robot follows ball but one motor started jerking.
+Need to be dismantled again
+
 
