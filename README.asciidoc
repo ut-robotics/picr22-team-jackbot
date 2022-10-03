@@ -32,16 +32,14 @@ What did you like/did not like about the course/building a robot?
 Suggestions for next year students.
 Suggestions for instructors.
 
+BLOG
+Documentation of Team Jackbot activites:
 
 
-Blogs at the end.
+Ball thrower : Made by Karl Rahn, spent 12h doing it
+19.sept 3h of making sketches, watching tutorials and reccommendations for Fusion 360.
+21.sept 1h made fixes to sketches
+22.sept 3h finished sketches, made parts to assemble the ramp
+26.sept 3h assembled the thrower ramp, made some fixes
+03.okt 3h checked if the thrower ramp fit into the test robot assembly (it was ok).
 
-
-software/README.asciidoc
-Instructions on how to set up and run the code.
-
-electronics/README.asciidoc
-Refer to "Mainboard documented" task requirements.
-
-firmware/README.asciidoc
-Format and description of the data that can be sent to and received from mainboard.
