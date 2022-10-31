@@ -54,4 +54,4 @@ Ball thrower : Made by Karl Rahn, spent 12h doing it
 Robot follows ball but one motor started jerking.
 Need to be dismantled again
 
-
+27.okt Tested throwing balls from a ramp. Code needs some additional time before being test ready. aprox 6h of coding time needed for an semi working code.
