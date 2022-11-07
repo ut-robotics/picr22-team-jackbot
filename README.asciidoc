@@ -98,3 +98,8 @@ Omni-wheel: Made by Karl Rahn, tested by Matis, Karl Villers and Nikita
 07.Nov
 2h Maybe printing out the new omniwheels and beautyrims.
 
+Camera holder: Made by Karl Rahn, tested by Matis, Karl Villers and Nikita.
+03.nov (Karl Rahn) 
+Made 1st version of camera holder, was not practical.
+07.nov (Karl Rahn)
+Made 2nd version of camera holder, probably better version, adjusted the RGB sensor to middle, asked for review.
