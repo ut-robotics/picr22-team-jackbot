@@ -74,3 +74,27 @@ Need to be dismantled again
 07.nov (Matis, Karl Villers, Karl Rahn, Nikita)
 3h Testing out the new ramp, needs some sanding for rough edges, mostly okay. As well
 2h Adjusted camera holder in fusion.
+
+Omni-wheel: Made by Karl Rahn, tested by Matis, Karl Villers and Nikita
+
+20.okt (Karl Rahn)
+3h Started making omniwheel design.
+
+21.okt (Karl Rahn)
+2h made some circular pattern designs, added metal pieces to hold rollers.
+
+27.okt (Karl Rahn)
+3h finished making omni wheel design, printed out the first version, but it was broken and unable to add rollers.
+
+28.okt (Karl Rahn)
+1.5h Fixed errors, made a body split different way, also made a beautyrim for the wheel, which is removable.
+
+31.okt
+2h Made last fixes, asked for a review from instructors.
+
+06.Nov
+1h Added missing rollers, also made the wheel mount and wheel holes to be closer to each other.
+
+07.Nov
+2h Maybe printing out the new omniwheels and beautyrims.
+
