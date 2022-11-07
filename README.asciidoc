@@ -36,22 +36,41 @@ BLOG
 
 Documentation of Team Jackbot activites:
 
-Ball thrower : Made by Karl Rahn, spent 12h doing it
+Ball thrower : Made by Karl Rahn, tested by Karl Villers, Matis and Nikita
+
 19.sept 
 3h of making sketches, watching tutorials and reccommendations for Fusion 360.
 
-21.sept
+21.sept (Karl Rahn)
 1h made fixes to sketches
 
 22.sept
 3h finished sketches, made parts to assemble the ramp
 
-26.sept 
-3h assembled the thrower ramp, made some fixes
+26.sept (Karl Rahn and Karl Villers)
+3h assembled the thrower ramp in Fusion, made some fixes
 
-03.okt 
+3,4.okt (Karl Rahn)
+6h major fixes to ramp walls.
+
+10,12.okt (Karl Rahn)
+5h Printed out the first version of the ramp and tested. Found out that, there are some errors and need to make new walls.
+
+17.okt (Karl Rahn)
+3h Fixed the errors, asked for instructors to review the fixes, almost ready for milling.
+
+20,21.okt (Karl Rahn)
+8h started doing some other parts for the robot such as motor holders, camera holder, omniwheels.
+
+31.okt (Matis and Karl Villers) Tested throwing balls from a ramp.
+Code needs some additional time before being test ready. aprox 6h of coding time needed for an semi working code.
+
+03.nov (Matis, Karl Villers, Karl Rahn) using the old model of ramp.
+3h Milled out the new ramp
 3h checked if the thrower ramp fit into the test robot assembly (it was ok).
 Robot follows ball but one motor started jerking.
 Need to be dismantled again
 
-27.okt Tested throwing balls from a ramp. Code needs some additional time before being test ready. aprox 6h of coding time needed for an semi working code.
+07.nov (Matis, Karl Villers, Karl Rahn, Nikita)
+3h Testing out the new ramp, needs some sanding for rough edges, mostly okay. As well
+2h Adjusted camera holder in fusion.
