@@ -105,3 +105,5 @@ Made 1st version of camera holder, was not practical.
 
 07.nov (Karl Rahn)
 Made 2nd version of camera holder, probably better version, adjusted the RGB sensor to middle, asked for review.
+(Matis Vahter) Me, Karl Villers and Nikita tested robots moving capabilities and did setup to prepeare for thursday.
+
