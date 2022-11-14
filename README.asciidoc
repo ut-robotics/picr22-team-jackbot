@@ -107,3 +107,12 @@ Made 1st version of camera holder, was not practical.
 Made 2nd version of camera holder, probably better version, adjusted the RGB sensor to middle, asked for review.
 (Matis Vahter) Me, Karl Villers and Nikita tested robots moving capabilities and did setup to prepeare for thursday.
 
+08.nov (Karl Rahn, Matis, Nikita, Karl Villers)
+7h Improved some mechanics, made a calculation to calculate the thrower motor speed for shooting ball from different ranges.
+
+09.nov (Karl Rahn, Matis, Karl Villers)
+7h Improved the code, algortithms were scuffed.
+
+10.nov (Whole team)
+Tried to qualify to the competition, unfortunately our bot was not working correctly, didn't know how to make fixes during that current time, will make new orbit code.
+
