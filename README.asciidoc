@@ -116,3 +116,6 @@ Made 2nd version of camera holder, probably better version, adjusted the RGB sen
 10.nov (Whole team)
 Tried to qualify to the competition, unfortunately our bot was not working correctly, didn't know how to make fixes during that current time, will make new orbit code.
 
+14.nov (whole team) 
+Presentation setup and Villers worked on robot to improve / remake
+Printing logics, needs testing
