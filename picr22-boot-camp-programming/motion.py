@@ -52,9 +52,8 @@ class OmniMotionRobot(IRobotMotion):
         
     def send(self, command):
         self.serialObj.write(command)
-        
     
-    def move(self, robotSpeedX, robotSpeedY, rot_speed):
+    def move(self, robotSpeedX, robotSpeedY, rot_speed, shooter):
         speeds = [0, 0, 0]
         wheelDistanceFromCenter = 13  ##find out
         robotSpeed = math.sqrt(robotSpeedX * robotSpeedX + robotSpeedY * robotSpeedY)
@@ -67,8 +66,13 @@ class OmniMotionRobot(IRobotMotion):
             speeds[i] = int(wheelLinearVelocity)
             
         disable_failsafe = 0
-        command1 = struct.pack('<hhhHBH', speeds[2], speeds[1], speeds[0], 0, disable_failsafe, 0xAAAA)
+        command1 = struct.pack('<hhhHBH', speeds[2], speeds[1], speeds[0], shooter, disable_failsafe, 0xAAAA)
         self.send(command1)
+        
+#     def thrower(thrower):
+#         disable_failsafe = 0
+#         command1 = struct.pack('<hhhHBH', 0, 0, 0, int(thrower), disable_failsafe, 0xAAAA)
+#         self.send(command1)
         
 
 #class TurtleRobot(IRobotMotion):
@@ -97,14 +101,16 @@ class OmniMotionRobot(IRobotMotion):
 #         
 # motion_irl = OmniMotionRobot()
 # motion_irl.open()
-# 
-def movexd(motor1, motor2 ,motor3, time2):
+#
+
+
+def movexd(motor1, motor2 ,motor3, memethrower, time2):
     timestop = 0
     
     while timestop <= time2:
         timestart = time.time()
         disable_failsafe = 0
-        command1 = struct.pack('<hhhHBH', int(motor1), int(motor3), int(motor2), 0, disable_failsafe, 0xAAAA)
+        command1 = struct.pack('<hhhHBH', int(motor1), int(motor3), int(motor2), int(memethrower), disable_failsafe, 0xAAAA)
         OmniMotionRobot.send(motion_irl, command1)
         mid = time.time()
         timestop += (mid-timestart)

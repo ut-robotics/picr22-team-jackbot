@@ -26,7 +26,7 @@ class RealsenseCamera(ICamera):
                 depth_width = 848, 
                 depth_height = 480,
                 depth_framerate = 60,
-                exposure = 50, 
+                exposure = 100, 
                 white_balace = 3500,
                 depth_enabled = True):
 

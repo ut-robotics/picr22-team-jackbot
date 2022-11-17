@@ -4,6 +4,8 @@ import _pickle as pickle
 import numpy as np
 import cv2
 import Color as c
+import numpy as np
+
 
 
 class Object():
@@ -45,10 +47,24 @@ class ProcessedResults():
         self.debug_frame = debug_frame
 
 
+
 #Main processor class. processes segmented information
 class ImageProcessor():
     def __init__(self, camera, color_config = "colors/colors.pkl", debug = False):
         self.camera = camera
+        blobparams = cv2.SimpleBlobDetector_Params()
+        blobparams.filterByArea = True
+        blobparams.minArea = 100
+        blobparams.maxArea = 80000
+        blobparams.filterByCircularity = False
+        #blobparams.minCircularity = 0.1
+        blobparams.minDistBetweenBlobs = 50
+        blobparams.filterByInertia = False
+        #blobparams.minInertiaRatio = 0.5
+        blobparams.filterByConvexity = False
+        #blobparams.minConvexity = 0.5
+
+        self.detector = cv2.SimpleBlobDetector_create(blobparams)
 
         self.color_config = color_config
         with open(self.color_config, 'rb') as conf:
@@ -74,44 +90,77 @@ class ImageProcessor():
         self.camera.close()
 
     def analyze_balls(self, t_balls, fragments) -> list:
+# #         cv2.imshow('Debugger', t_balls)
+# #         #t_balls = cv2.bilateralFilter(t_balls,9,75,75)
+#         keypoint_balls = self.detector.detect(t_balls)
+#         cv2.imshow('Debugger2', t_balls)
+# #         contours, hierarchy = cv2.findContours(t_balls, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+# 
+#         balls = []
+#         
+#         for contour in keypoint_balls:
+#             print(contour)
+#             
+#             # ball filtering logic goes here. Example includes filtering by size and an example how to get pixels from
+#             # the bottom center of the fram to the ball
+# 
+# #             size = cv2.contourArea(contour)
+# #             
+# #             #size filtration
+# #             print(contour.size, contour.pt[0], contour.pt[1])
+#             if contour.size < 3:
+#                 continue
+# #             
+# #             #print(size)
+# #             x, y, w, h = cv2.boundingRect(contour)
+# # 
+# #             ys	= np.array(np.arange(y + h, self.camera.rgb_height), dtype=np.uint16)
+# #             xs	= np.array(np.linspace(x + w/2, self.camera.rgb_width / 2, num=len(ys)), dtype=np.uint16)
+# # 
+# #             obj_x = int(x + (w/2))
+# #             obj_y = int(y + (h/2))
+# #             obj_dst = obj_y
+# # 
+#             if self.debug:
+# #                 size2 = cv2.contourArea(contour)
+# #                 self.debug_frame[ys, xs] = [0, 0, 0]
+#                 cv2.circle(self.debug_frame,(int(contour.pt[0]), int(contour.pt[1])), 10, (0,255,0), 2)
+# # 	
+#             balls.append(Object(x = contour.pt[0], y = contour.pt[1], size = contour.size, distance = contour.pt[1], exists = True))
+# #             
+# 
+#         balls.sort(key= lambda x: x.distance)
+# 
+#         return balls
+#     
         contours, hierarchy = cv2.findContours(t_balls, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
         balls = []
         
         for contour in contours:
             
-            
-            # ball filtering logic goes here. Example includes filtering by size and an example how to get pixels from
-            # the bottom center of the fram to the ball
+            # basket filtering logic goes here. Example includes size filtering of the basket
 
             size = cv2.contourArea(contour)
-            
-            #size filtration
-            if size < 50:
-                continue
-            
-            #print(size)
-            x, y, w, h = cv2.boundingRect(contour)
 
-            ys	= np.array(np.arange(y + h, self.camera.rgb_height), dtype=np.uint16)
-            xs	= np.array(np.linspace(x + w/2, self.camera.rgb_width / 2, num=len(ys)), dtype=np.uint16)
+            if size < 30:
+                continue
+
+            x, y, w, h = cv2.boundingRect(contour)
 
             obj_x = int(x + (w/2))
             obj_y = int(y + (h/2))
             obj_dst = obj_y
 
-            if self.debug:
-                size2 = cv2.contourArea(contour)
-                self.debug_frame[ys, xs] = [0, 0, 0]
-                cv2.circle(self.debug_frame,(obj_x, obj_y), 10, (0,255,0), 2)
-
             balls.append(Object(x = obj_x, y = obj_y, size = size, distance = obj_dst, exists = True))
-            
 
-        balls.sort(key= lambda x: x.distance)
-
+        balls.sort(key= lambda x: x.size)
+        try:
+            if self.debug:
+                if balls[0].exists == True:
+                    cv2.circle(self.debug_frame,(balls[0].x, balls[0].y), int((balls[0].size/120)+12), 255, -1)
+        except:
+            pass
         return balls
-
     def analyze_baskets(self, t_basket, debug_color = (0, 255, 255)) -> list:
         contours, hierarchy = cv2.findContours(t_basket, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 

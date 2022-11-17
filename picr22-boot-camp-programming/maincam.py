@@ -13,8 +13,9 @@ import threading
 import camera
 from threading import Thread
 
-EnemyBasket = "pinkish"
 
+EnemyBasket = "pinkish"
+global state
 state = "findball"
 motion_irl = motion.OmniMotionRobot()
 motion_irl.open()
@@ -92,8 +93,67 @@ def sort_size(obj_list):
     else:      
         return obj_list
     
+def findaball():
+    global state
+    ### robot tries to find ball
+    motion_irl.move(0,0,10,0)
+    if processedData.balls[0].x >= 100 or processedData.balls[0].x <= 740:
+        ### robot found ball
+        state = "getclose"
+        
+def getclose():
+    global state
+    if len(processedData.balls) == 0:
+        print("getclose debuig")
+        state = "findball"
+    if processedData.balls[0].y >= 335:
+        state = "ballcentered"
+#             try:
+    ### robot is in driving mode towards the ball hopefully xd
+    ## change speed depending on size
+    if processedData.balls[0].x <= 419:
+        
+        if processedData.balls[0].x >= 100 and processedData.balls[0].x < 200:
+            print("turning left semi hard")
+            motion_irl.move(-50,20,10,0)
+        elif processedData.balls[0].x >= 200 and processedData.balls[0].x <= 300:
+            print("turning left kind of straight")
+            motion_irl.move(-20,35,5,0)
+        elif processedData.balls[0].x >= 300 and processedData.balls[0].x < 420:
+            print("turning left kind of straight")
+            motion_irl.move(-15,20,1,0)
+        else:
+            print("turning left vaga hard")
+            motion_irl.move(0,0,25,0)
+            
+    elif processedData.balls[0].x >= 421:
+        if processedData.balls[0].x <= 740 and processedData.balls[0].x > 640:
+            print("turning right semi hard")
+            motion_irl.move(50,20,-10,0)
+        elif processedData.balls[0].x <= 640 and processedData.balls[0].x >= 520:
+            print("turning right kind of straight")
+            motion_irl.move(20,35,-5,0)
+        elif processedData.balls[0].x <= 520 and processedData.balls[0].x > 420:
+            print("turning right kind of straight")
+            motion_irl.move(15,20,-1,0)
+        else:
+            print("turning right really hard")
+            motion_irl.move(0,0,-25,0)
+        
+    else:
+        motion_irl.move(0,5,0,0)
+        
+        ### if ball is centered stop moving change later.
+        ### check how far the ball is in reality.
+        print("looking at the ball xdddd")
+#             except:
+#                 print("FINDBALL EXCEPT")
+#                 ## ball is out of view gives error starts
+#                 #looking for the ball again xdd
+#                 #state == "findball"
 
-blobparams = cv2.SimpleBlobDetector_Params()
+
+'''blobparams = cv2.SimpleBlobDetector_Params()
 blobparams.filterByArea = True
 blobparams.minArea = 30
 blobparams.maxArea = 80000
@@ -104,7 +164,7 @@ blobparams.filterByInertia = False
 #blobparams.minInertiaRatio = 0.5
 blobparams.filterByConvexity = False
 #blobparams.minConvexity = 0.5
-
+'''
 detector = cv2.SimpleBlobDetector_create(blobparams)
 
 # Open the camera
@@ -121,19 +181,33 @@ cam = camera.RealsenseCamera()
 # limit width
 #width_center = width/2
 #height_center = height/2
-debug = True
+debug = False
 processor = image_processor.ImageProcessor(cam, debug=debug) #, debug=debug
 processor.start()
-cv2.namedWindow("Original") # do not delete, used to quit the program
+#cv2.namedWindow("Original") # do not delete, used to quit the program
+#cv2.namedWindow("Debugger")
+#cv2.namedWindow("Debugger2")
 while True:
-    processedData = processor.process_frame(aligned_depth=False)
     
+    ########################
+    ########################
+    #find baskets by processedata
+    #find balls , black line by blob
+    ########################
+    ########################
+    processedData = processor.process_frame(aligned_depth=False)
+    ########################
+    ########################
 #     contours, hierarchy = cv2.findContours(t_balls, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
     try:
-        print(processedData.balls[0].size, processedData.balls[0].x, processedData.balls[0].y)
+        print(processedData.balls[0].size, processedData.balls[0].x, processedData.balls[0].y , " basket ",  processedData.basket[0].y)
     except:
         pass
+#     
+#     print("magneto, ", processedData.basket_m)
+#     print("blu, ", processedData.basket_b)
+    
     # Read the image from the camera
     #ret, frame = cap.read()
     #frame_bgr = frame.copy()
@@ -150,7 +224,7 @@ while True:
 #     img = cv2.drawKeypoints(img, keypoint_ball, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 #
     
-    
+    #motion_irl.move(0,0,0)
 
 #     all_objects = list_objects(keypoint_ball)
 #     if len(all_objects) > 0:
@@ -162,100 +236,98 @@ while True:
 #         close_xy = biggest_obj[0:2]
 #         close_size = biggest_obj[2]
 
-
-#         ###KPPID
-#         x = close_xy[0]
-#         y = close_xy[1]
-#         dist = np.sqrt(np.power(width_center_new-x,2)+np.power(height_center_new-y,2))
-#         
-#         if close_xy[0] < width_center_new:
-#             dist = dist*(-1)
-# 
-#         obj_loc = -((x-width_center_new)/width_center_new)    
-# 
-#         kp = 35.0 # increase proportionality constan (kp) to make turning stronger
-#         # the linelocation value already shows error (location-center)
-#         e = obj_loc # error of movement
-#         Pout = kp*e
-#         ###KPPID END
-        
         # show line to the biggest object
 #         img = cv2.arrowedLine(img, (int(width_center), int((height_center)+340)), close_xy, (0, 255, 255), 3)
     
-    
     try:
-        
+        print(state)
         if state == "findball":
             ### robot tries to find ball
-            motion_irl.move(0,0,10)
-            if processedData.balls[0].x >= 100 or processedData.balls[0].x <= 740:
-                ### robot found ball
-                state = "getclose"
+            findaball()
         elif state == "getclose":
-            if processedData.balls[0].y >= 335:
-                state = "ballcentered"
-#             try:
-            ### robot is in driving mode towards the ball hopefully xd
-            ## change speed depending on size
-            if processedData.balls[0].x <= 419:
-                
-                if processedData.balls[0].x >= 100 and processedData.balls[0].x < 200:
-                    print("pooran vasakule semi hard")
-                    motion_irl.move(-40,15,10)
-                elif processedData.balls[0].x >= 200 and processedData.balls[0].x <= 300:
-                    print("pooran vasakule kind of otse")
-                    motion_irl.move(-15,30,5)
-                elif processedData.balls[0].x >= 300 and processedData.balls[0].x < 420:
-                    print("pooran vasakule kind of otse")
-                    motion_irl.move(-10,20,1)
-                else:
-                    print("pooran vasakule vaga hard")
-                    motion_irl.move(0,0,20)
-                    
-            elif processedData.balls[0].x >= 421:
-                if processedData.balls[0].x <= 740 and processedData.balls[0].x > 640:
-                    print("pooran paremale semi hard")
-                    motion_irl.move(40,15,-10)
-                elif processedData.balls[0].x <= 640 and processedData.balls[0].x >= 520:
-                    print("pooran paremale kind of otse")
-                    motion_irl.move(15,30,-5)
-                elif processedData.balls[0].x <= 520 and processedData.balls[0].x > 420:
-                    print("pooran paremale kind of otse")
-                    motion_irl.move(10,20,-1)
-                else:
-                    print("pooran paremale vaga hard")
-                    motion_irl.move(0,0,-20)
-                
-            else:
-                motion_irl.move(0,5,0)
-                
-                ### if ball is centered stop moving change later.
-                ### check how far the ball is in reality.
-                print("looking at the ball xdddd")
-#             except:
-#                 print("FINDBALL EXCEPT")
-#                 ## ball is out of view gives error starts
-#                 #looking for the ball again xdd
-#                 #state == "findball"
+            ### ball found get close
+            getclose()
         elif state == "ballcentered":
             print("ballcentered xdddd")
+            if len(processedData.balls) == 0:
+                state = "findball"
             if processedData.balls[0].y >= 340:
+                ###if ball is really close by y cordinate
                 state = "putsis"
             else:
-                motion_irl.move(0,5,0)
+                
+                ### move towards the ball really slowly
+                motion_irl.move(0,5,0,0)
+                print(processedData.balls[0].y)
+            if processedData.balls[0].y <= 200:
+                state = "findball"
+        elif state == "angleshoot":
+            print(processedData.basket_b.x)
+            if processedData.basket_b.x <= 400:
+                if processedData.basket_b.x >= 400 and processedData.basket_b.x <= 421:
+                    motion_irl.move(2,0,2,0)
+                else:
+                    motion_irl.move(7,0,4,0)
+            elif processedData.basket_b.x >= 448:
+                if processedData.basket_b.x <= 448 and processedData.basket_b.x >= 427:
+                    motion_irl.move(-2,0,-2,0)
+                else:
+                    motion_irl.move(-7,0,-4,0)
+            elif processedData.basket_b.x <= 426 and processedData.basket_b.x >= 424:
+                state = "makeshot"
+                motion_irl.move(0,0,0,0)
+                print("shoot")
+                ##shoot
+                temptimer = 0
+
+        elif state == "backthefoff": ## basket fall back xd
+            timertemp = 0
+            while timertemp < 50:
+                timertemp += 1
+                motion_irl.move(0,-10,5,0)
+            state = "findball"
+
+        elif state == "makeshot":
+            print("shoot")
+            print(processedData.basket_b.size)
+            if processedData.basket_b.size >= 18000:
+                state = "backthefoff"
+            temptimer += 1
+            print(processedData.basket_b.x)
+
+            if temptimer >= 76:
+                    state = "findball"
+            if temptimer >= 30:
+                motion_irl.move(0,30,0,1000)
+
+
         else:
-            motion_irl.move(10,0,5)
-            print("putsis")
+            #orbit basics
+            if len(processedData.balls) == 0:
+                state = "findball"
+            print(processedData.basket_b.size)
+            ### hoovers aorund the ball
+            if processedData.balls[0].y > 300:
+                if processedData.balls[0].x > 424:
+                    motion_irl.move(15,3,5,0)
+                else:
+                    motion_irl.move(5,3,5,0)
+            elif processedData.balls[0].y < 548:
+                if processedData.balls[0].x > 424:
+                    motion_irl.move(5,-3,5,0)
+                else:
+                    motion_irl.move(15,-3,5,0)
+            else:
+                motion_irl.move(0,0,10,0)
+            ##find magneta or blu
+            if processedData.basket_b.x >= 300 and processedData.basket_b.x <= 548:
+                state = "angleshoot"
+            if processedData.basket_b.size >= 18000:
+                state = "backthefoff"
+            print(processedData.basket_b.x)
+            print("putsis @debug message@")
     except:
-        print("vittus")
         pass
-    try:
-        if all_objects[0][2] >= 100:
-            state = "ballcentered"
-    except:
-        pass
-    #STRAIGHT PID TRY632
-    
     
         
     if debug:
