@@ -122,9 +122,13 @@ Presentation setup and Villers worked on robot to improve / remake
 Printing logics, needs testing
 
 | Date           | Time spent | Names | What did you do? |
+
 |----------------|------------|-------|------------------|
+
 | 1st September  | -          | -     | -                |
+
 | 5th September  | -          | -     | -                |
+
 | 9th September  | -          | -     | -                |
 | 12th September | -          | -     | -                |
 | 15th September | -          | --    | -                |
