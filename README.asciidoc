@@ -146,7 +146,7 @@ Printing logics, needs testing
 | 10th November  | -          | -     | -                |
 | 14th November  | -          | -     | -                |
 | 17th November  | -          | -     | -                |
-| 21st November  | -          | -     | -                |
+| 21st November  | KarlR 6h, KarlV 6h, Nikita 3h, Matis 4h          | KarlR, Nikita, KarlV, Matis     | KarlR improved the design of the JackBot, almost ready for manufacturing, Nikita started making a design of schematic (improved KarlR's scheme), Matis improved the equations for throwing the ball, KarlV milled out motor mounts and approved the orbiting code.                |
 | 24th November  | -          | -     | -                |
 | 28th November  | -          | -     | -                |
 | 1st December   | -          | -     | -                |
