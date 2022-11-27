@@ -121,42 +121,76 @@ Tried to qualify to the competition, unfortunately our bot was not working corre
 Presentation setup and Villers worked on robot to improve / remake
 Printing logics, needs testing
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+___________________________________________________________________________________________________________________________
+ ________   _______    ________   _________   _______    _____ ______    ________   _______    ________     
+|\   ____\ |\  ___ \  |\   __  \ |\___   ___\|\  ___ \  |\   _ \  _   \ |\   __  \ |\  ___ \  |\   __  \    
+\ \  \___|_\ \   __/| \ \  \|\  \\|___ \  \_|\ \   __/| \ \  \\\__\ \  \\ \  \|\ /_\ \   __/| \ \  \|\  \   
+ \ \_____  \\ \  \_|/__\ \   ____\    \ \  \  \ \  \_|/__\ \  \\|__| \  \\ \   __  \\ \  \_|/__\ \   _  _\  
+  \|____|\  \\ \  \_|\ \\ \  \___|     \ \  \  \ \  \_|\ \\ \  \    \ \  \\ \  \|\  \\ \  \_|\ \\ \  \\  \| 
+    ____\_\  \\ \_______\\ \__\         \ \__\  \ \_______\\ \__\    \ \__\\ \_______\\ \_______\\ \__\\ _\ 
+   |\_________\\|_______| \|__|          \|__|   \|_______| \|__|     \|__| \|_______| \|_______| \|__|\|__|
+   \|_________|                                                                                             
+___________________________________________________________________________________________________________________________
 
-| Date           | Time spent | Names | What did you do? |
-|----------------|------------|-------|------------------|
-| 1st September  | x          | x     | x                |
-| 5th September  | x          | x     | x                |
-| 9th September  | x          | x     | x                |
-| 12th September | x          | x     | x                |
-| 15th September | x          | x     | x                |
-| 19th September | x          | x     | x                |
-| 22nd September | x          | x     | x                |
-| 26th September | x          | x     | x                |
-| 29th September | x          | x     | x                |
-| 3rd October    | x          | x     | x                |
-| 6th October    | x          | x     | x                |
-| 10th October   | x          | x     | x                |
-| 13th October   | x          | x     | x                |
-| 17th October   | x          | x     | x                |
-| 20th October   | x          | x     | x                |
-| 24th October   | x          | x     | x                |
-| 27th October   | x          | x     | x                |
-| 31st October   | x          | x     | x                |
-| 3rd November   | x          | x     | x                |
-| 7th November   | x          | x     | x                |
-| 10th November  | x          | x     | x                |
-| 14th November  | x          | x     | x                |
-| 17th November  | x          | x     | x                |
-| 21st November  | KarlR 6h, KarlV 6h, Nikita 3h, Matis 4h          | KarlR, Nikita, KarlV, Matis     | KarlR improved the design of the JackBot, almost ready for manufacturing, Nikita started making a design of schematic (improved KarlR's scheme), Matis improved the equations for throwing the ball, KarlV milled out motor mounts and approved the orbiting code.                |
-| 24th November  | x          | x     | x               |
-| 28th November  | x          | x     | x               |
-| 1st December   | x          | x     | x               |
-| 5th December   | x          | x     | x               |
-| 8th December   | x          | x     | x               |
-| 12th December  | x          | x     | x               |
-| 15th December  | x          | x     | x               |
+1st September  
+5th September  
+9th September  
+12th September 
+15th September 
+19th September 
+22nd September 
+26th September 
+29th September
+___________________________________________________________________________________________________________________________
+ ________   ________  _________   ________   ________   _______    ________     
+|\   __  \ |\   ____\|\___   ___\|\   __  \ |\   __  \ |\  ___ \  |\   __  \    
+\ \  \|\  \\ \  \___|\|___ \  \_|\ \  \|\  \\ \  \|\ /_\ \   __/| \ \  \|\  \   
+ \ \  \\\  \\ \  \        \ \  \  \ \  \\\  \\ \   __  \\ \  \_|/__\ \   _  _\  
+  \ \  \\\  \\ \  \____    \ \  \  \ \  \\\  \\ \  \|\  \\ \  \_|\ \\ \  \\  \| 
+   \ \_______\\ \_______\   \ \__\  \ \_______\\ \_______\\ \_______\\ \__\\ _\ 
+    \|_______| \|_______|    \|__|   \|_______| \|_______| \|_______| \|__|\|__|
+___________________________________________________________________________________________________________________________
+
+3rd October    
+6th October    
+10th October   
+13th October   
+17th October   
+20th October   
+24th October   
+27th October   
+31st October
+___________________________________________________________________________________________________________________________
+ ________    ________   ___      ___  _______    _____ ______    ________   _______    ________     
+|\   ___  \ |\   __  \ |\  \    /  /||\  ___ \  |\   _ \  _   \ |\   __  \ |\  ___ \  |\   __  \    
+\ \  \\ \  \\ \  \|\  \\ \  \  /  / /\ \   __/| \ \  \\\__\ \  \\ \  \|\ /_\ \   __/| \ \  \|\  \   
+ \ \  \\ \  \\ \  \\\  \\ \  \/  / /  \ \  \_|/__\ \  \\|__| \  \\ \   __  \\ \  \_|/__\ \   _  _\  
+  \ \  \\ \  \\ \  \\\  \\ \    / /    \ \  \_|\ \\ \  \    \ \  \\ \  \|\  \\ \  \_|\ \\ \  \\  \| 
+   \ \__\\ \__\\ \_______\\ \__/ /      \ \_______\\ \__\    \ \__\\ \_______\\ \_______\\ \__\\ _\ 
+    \|__| \|__| \|_______| \|__|/        \|_______| \|__|     \|__| \|_______| \|_______| \|__|\|__|
+___________________________________________________________________________________________________________________________
+
+3rd November   
+7th November   
+10th November  
+14th November  
+17th November 
+21st November KarlR 6h, KarlV 6h, Nikita 3h, Matis 4h: KarlR improved the design of the JackBot, almost ready for manufacturing, Nikita started making a design of schematic (improved KarlR's scheme), Matis improved the equations for throwing the ball, KarlV milled out motor mounts and approved the orbiting code.                
+24th November
+28th November
+___________________________________________________________________________________________________________________________
+ ________   _______    ________   _______    _____ ______    ________   _______    ________     
+|\   ___ \ |\  ___ \  |\   ____\ |\  ___ \  |\   _ \  _   \ |\   __  \ |\  ___ \  |\   __  \    
+\ \  \_|\ \\ \   __/| \ \  \___| \ \   __/| \ \  \\\__\ \  \\ \  \|\ /_\ \   __/| \ \  \|\  \   
+ \ \  \ \\ \\ \  \_|/__\ \  \     \ \  \_|/__\ \  \\|__| \  \\ \   __  \\ \  \_|/__\ \   _  _\  
+  \ \  \_\\ \\ \  \_|\ \\ \  \____ \ \  \_|\ \\ \  \    \ \  \\ \  \|\  \\ \  \_|\ \\ \  \\  \| 
+   \ \_______\\ \_______\\ \_______\\ \_______\\ \__\    \ \__\\ \_______\\ \_______\\ \__\\ _\ 
+    \|_______| \|_______| \|_______| \|_______| \|__|     \|__| \|_______| \|_______| \|__|\|__|
+___________________________________________________________________________________________________________________________
+
+1st December
+5th December  
+8th December
+12th December 
+15th December
 
