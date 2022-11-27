@@ -1,5 +1,14 @@
+     _         _   ___      _   
+  _ | |__ _ __| |_| _ ) ___| |_ 
+ | || / _` / _| / / _ \/ _ \  _|
+  \__/\__,_\__|_\_\___/\___/\__|
+                                
 Team members: Karl Villers, Karl Rahn, Matis Vahter, Nikita Kurenkov
 https://gmail1315991.autodesk360.com/g/projects/20220905552790856/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uMTlSNUpCd09UQ1NRQ2FLUjZ3LUhLQQ==
+
+
+
+
 
 
 Programming section
@@ -136,6 +145,7 @@ Printing logics, needs testing
 \__ \/ -_) '_ \  _/ -_) '  \| '_ \/ -_) '_|
 |___/\___| .__/\__\___|_|_|_|_.__/\___|_|   
           |_|                               
+          
 During the first 2 weeks of September, we together messed with assembling LeBot, programmers studied the code and mechanics/electronics were soldering different wires
 
 1st September KarlR & KarlV 3h soldering battery connection wires. Nikita and Matis 3h were studying code and how to access the PC. 
@@ -152,7 +162,7 @@ During the first 2 weeks of September, we together messed with assembling LeBot,
 
 22nd September KarlR 3h, worked on the design of the Ball Thrower. KarlV 3h, did some wire management, which meant that robot had to be disassembled again. Matis 3h was working on the camera thresholding, Nikita couldn't come that day.
 
-26th September KarlR 3h, worked on the design of the Ball Thrower. KarlV couldn't attend the lesson. Matis 3h was working on the camera threshold, Nikita 3h was helping him with it.
+26th September KarlR 2h, worked on the design of the Ball Thrower. KarlV couldn't attend the lesson. Matis 3h was working on the camera threshold, Nikita 3h was helping him with it.
 
 29th September KarlR couldn't attend the day, though he improved the design at home approximately for 4h or so. KarlV 3h was helping Nikita and Matis for reviewing the work of motors.
 
@@ -162,15 +172,15 @@ During the first 2 weeks of September, we together messed with assembling LeBot,
  \___/\__|\__\___/_.__/\___|_|  
  
                                  
-3rd October KarlR printed out the thrower walls and ramps with 3D printer. KarlV 3h assembled the parts and made the thrower ready. Matis and Nikita 3h were able to test the ball thrower and it turned out that the ramp's angle was too steep, which meant that KarlR had to edit the ramp and make a new ramp.
+3rd October KarlR 2h, improved the ball thrower. KarlV 3h worked on the camera position. Matis and Nikita 3h were trying to move the robot for the first time in action.
 
-6th October KarlR     
+6th October KarlR 3h, made some last edits for the ramp. KarlV reviewed the movement of LeBot, tightened the wheel bolts. Nikita and Matis 3h made the robot to follow the ball.    
 
-10th October   
+10th October KarlR 2h, tried to print out the parts for ball thrower. KarlV assembled the parts and then tested the thrower with Matis and Nikita (3h). Turned out that the ramp's angle was too steep, which meant that new ramp should be made.  
 
-13th October   
+13th October KarlR 3h, tried fixing the ramp's angle, improved the thrower a bit and found out that it's better to use a miller for manufacturing the ramp. KarlV and programming team was trying to work with the printed ramp (3h).  
 
-17th October   
+17th October KarlR 3h made the manufacturing model ready, although he couldn't mill out the updated thrower due to queue to the milling machine. KarlV couldn't attend the day. Matis and Nikita 3h were making some major changes to the code to run smoother.
 
 20th October   
 
