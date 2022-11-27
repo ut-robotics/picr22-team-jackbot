@@ -40,14 +40,13 @@ Suggestions for instructors.
   ___ __ ___ ___ 
  |_  )  \_  )_  )
   / / () / / / / 
- /___\__/___/___|
-                 
-
-BLOG
-
+ /___\__/___/___|           
+ ___ _    ___   ___ 
+ | _ ) |  / _ \ / __|
+ | _ \ |_| (_) | (_ |
+ |___/____\___/ \___|
+                     
 Documentation of Team Jackbot activites:
-
-Ball thrower : Made by Karl Rahn, tested by Karl Villers, Matis and Nikita
 
 
 19.sept Karl Rahn
@@ -137,24 +136,25 @@ Printing logics, needs testing
 \__ \/ -_) '_ \  _/ -_) '  \| '_ \/ -_) '_|
 |___/\___| .__/\__\___|_|_|_|_.__/\___|_|   
           |_|                               
-          
-1st September  
+During the first 2 weeks of September, we together messed with assembling LeBot, programmers studied the code and mechanics/electronics were soldering different wires
 
-5th September  
+1st September KarlR & KarlV 3h soldering battery connection wires. Nikita and Matis 3h were studying code and how to access the PC. 
 
-9th September  
+5th September  KarlR & KarlV 3h finished soldering wires, started assembling LeBot chassis and electronics. Matis and Nikita were working on the code already, making some 
 
-12th September 
+9th September  KarlR & KarlV 3h Finished assembling LeBot. Matis and Nikita were able to move the wheel motors for the first time.
 
-15th September 
+12th September KarlR 2h started learing tools of Autodesk Fusion360. KarlV 3h was working on robot, tightening bolts and making sure that the pcbs will stay on the robot. Nikita and Matis 3h managed to move all the 3 wheels.
 
-19th September 
+15th September KarlR 3h, managed to get his hands on Autodesk licence, making first sketches, still watching tutorials and LeBots designs. KarlV found some errors for the assemble, took it apart, fixed a soldering. Nikita and Matis were editing the code, making a structure for it.
 
-22nd September 
+19th September KarlR 3h, started making the Ball Thrower, taking measures from the ball and motor. KarlV 3h assembled the robot again and checked if more errors can be found. Matis and Nikita were able to move the 3 motors again and tried moving the thrower motor as well. 
 
-26th September 
+22nd September KarlR 3h, worked on the design of the Ball Thrower. KarlV 3h, did some wire management, which meant that robot had to be disassembled again. Matis 3h was working on the camera thresholding, Nikita couldn't come that day.
 
-29th September
+26th September KarlR 3h, worked on the design of the Ball Thrower. KarlV couldn't attend the lesson. Matis 3h was working on the camera threshold, Nikita 3h was helping him with it.
+
+29th September KarlR couldn't attend the day, though he improved the design at home approximately for 4h or so. KarlV 3h was helping Nikita and Matis for reviewing the work of motors.
 
   ___     _       _             
  / _ \ __| |_ ___| |__  ___ _ _ 
@@ -162,9 +162,9 @@ Printing logics, needs testing
  \___/\__|\__\___/_.__/\___|_|  
  
                                  
-3rd October
+3rd October KarlR printed out the thrower walls and ramps with 3D printer. KarlV 3h assembled the parts and made the thrower ready. Matis and Nikita 3h were able to test the ball thrower and it turned out that the ramp's angle was too steep, which meant that KarlR had to edit the ramp and make a new ramp.
 
-6th October    
+6th October KarlR     
 
 10th October   
 
