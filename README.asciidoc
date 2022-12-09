@@ -3,28 +3,11 @@
  | || / _` / _| / / _ \/ _ \  _|
   \__/\__,_\__|_\_\___/\___/\__|
                                 
-Team members: Karl Villers, Karl Rahn, Matis Vahter, Nikita Kurenkov
+Team members: Karl Villers - MPE
+              Karl Rahn - ME
+              Matis Vahter - P
+              Nikita Kurenkov - PE
 https://gmail1315991.autodesk360.com/g/projects/20220905552790856/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uMTlSNUpCd09UQ1NRQ2FLUjZ3LUhLQQ==
-
-Programming section
-What libraries did you use (and for what purposes)?
-A brief description of your game logic and overall code structure.
-A block diagram of your game logic.
-A short analysis of what was good and bad in your code and how to improve.
-
-Electronics section
-If you used something different from what was given at the start of the course or did something different, describe it.
-Photos illustrating electronics on your robot. (electronics board, cable management, etc.)
-A short analysis of what was good and bad in your electronics and how to improve.
-
-Mechanics section
-If you used something different from what was given at the start of the course or did something different, describe it.
-Description of the main points of interest in your ball thrower design and construction process.
-Photos of your robot.
-A short analysis of what was good and bad in your mechanics and how to improve.
-
-Personal comments section (see below for requirements).
-Each member must write a paragraph that covers the following:
 
 On which parts of the robot did you work on?
 What did you learn?
@@ -117,7 +100,7 @@ ________________________________
 
 21st November --- KarlR 6h, KarlV 6h, Nikita 3h, Matis 4h: KarlR improved the design of the JackBot, almost ready for manufacturing, Nikita started making a design of schematic (improved KarlR's scheme), Matis improved the equations for throwing the ball, KarlV milled out motor mounts and approved the orbiting code.                
 
-24th November --- KarlR 5h printed out the wheels and made a beautyrim, as well printed out the battery holders. 3h KarlV and Matis were trying to fix the orbiting problem for the robot. Nikita 4h improved the scheamtic with KarlR advice.
+24th November --- KarlR 5h printed out the wheels and made a beautyrim, as well printed out the battery holders. 3h KarlV and Matis were trying to fix the orbiting problem for the robot. Nikita 4h improved the schematic with KarlR advice.
 
 28th November --- 6h KarlR, 6h KarlV, 3h Matis, 3h Nikita. KarlR edited the chassis design. Villers holed and threaded wheel mounts, Matis disassembled LeBot and assembled new OmniWheels for JackBot. Nikita made major changes for PCB and schematic. 
 
@@ -127,11 +110,13 @@ ________________________________
 |___/\___\__\___|_|_|_|_.__/\___|_|  
                                       
 
-1st December ---
+1st December --- 5h KarlR, 5h KarlV, 3h Matis, 3h Nikita. KarlR and KarlV printed the robot chassis details, Matis was improving the Omniwheels. KarlR was making a manufacture file for the milling of the JackBot. Nikita made some last improvements for the PCB and started working on firmware.
 
-5th December  ---
+5th December  --- 7h KarlR & KarlV, 4h Matis, 3.5h Nikita. PCB ready for ordering, milled and manufactured the whole new Bot. 
 
-8th December ---
+6th December --- 4h KarlR, KarlV and Matis. Painted the robot chassis parts with spray paint and sanded some parts. Melted the threads into the 3D printed parts, assembled the bot with old electronics, ready for movement.
+
+8th December --- 6h KarlR & KarlV & Matis, 4.5h Nikita. KarlR and Nikita worked on firmware, KarlV and Matis were working on the code. Qualified to the test competition first time with new bot and managed to achieve 2nd place. Got some points for the manufacturing and some electronics as well.
 
 12th December ---
 
