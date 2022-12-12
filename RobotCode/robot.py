@@ -1,19 +1,9 @@
 import numpy as np
-import cv2
-import time
-import math
-import segment
-import image_processor
-
-import Color as c
 import motion
-import time
-import struct
-import threading
-import camera
-from threading import Thread
 
-middle_x = 430
+
+
+#middle_x = 430
 middle_xbasket = 424
 fasttimer = 0
 prev_rad=250
@@ -25,25 +15,26 @@ motion_irl = motion.OmniMotionRobot()
 motion_irl.open()
 state = "findball"
 
-###LISA FUNKTSIOONID
+
+### LISA FUNKTSIOONID ###
 def controller(current, target, x_scale = 1, y_scale = 1):
     return (2 / (1 + np.exp(3*(target-current)/x_scale)) - 1) * y_scale
 
 def clamp(n, minn, maxn):
     return max(min(maxn, n), minn)
 
-###MAIN FUNKTSIOONID
+def stop():
+    motion_irl(0,0,0,0)
+
+
+
+### MAIN FUNKTSIOONID ###
 def backoff():
-    global state
+     
     print(" STATE: backoff")
     motion_irl.move(0,-20,0,0)
 
-def stop():
-    motion_irl(0,0,0,0
-    )
-
-
-def orbit(radius, speed_x, cur_radius, cur_object_x):
+def orbit(radius, speed_x, cur_radius, cur_object_x, middle_x):
         if speed_x>0:
             speed_x=clamp(speed_x,4,60)
         if speed_x<0:
@@ -68,9 +59,10 @@ def orbit(radius, speed_x, cur_radius, cur_object_x):
         print("robot:",int(speed_x), int(speed_y), int(speed_r))
         
         motion_irl.move(int(speed_x), int(speed_y), int(speed_r),0)
-        
-def getclose(X,Y):
-    global state
+
+
+def getclose(X,Y,middle_x):
+
     print("STATE: getclose")
 
     offcentre = (X - middle_x)
@@ -86,11 +78,9 @@ def getclose(X,Y):
         motion_irl.move(int(t_speed/3),int((50-Yslow)),int(-t_speed/10),0)
         print("Slow down")
 
-## temporary timer
 
 def findaball(processedData):
-    global state
-    global fasttimer
+    global fasttimer     #BAD!!!!!!!!!!!!!
     print(" STATE: findball")
     ### robot tries to find ball
     gofasttimer = 900
@@ -119,28 +109,15 @@ def findaball(processedData):
 
     fasttimer += 1
 
-def swerve(x,leftright): # x ja left 0 : right 1
-    temptimer = 0
-    tempspeed = (middle_x-x)/14
-    tempspeedtimer = (middle_x-x)/3
-    while temptimer <= 140+tempspeedtimer:
-        if leftright == 0:
-            
-            motion_irl.move(-40-tempspeed,0,0,0)
-        else:
-            tempspeed = tempspeed * -1
-            motion_irl.move(40+tempspeed,0,0,0)
-        temptimer += 1
 
 def turn45(): # x ja left 0 : right 1
     temptimer = 0
-    
     while temptimer <= 270:
         motion_irl.move(0,-15,65,0)
         temptimer += 1
 
-def makeshot(dist, basketx, timer, ballseen):
-    global state
+
+def makeshot(dist, basketx, timer, ballseen):     
     if dist <= 1450:
         throwdistance = (dist) * 0.192307 + 338 ### old 
         print("Short shot")
