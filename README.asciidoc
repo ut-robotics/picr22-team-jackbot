@@ -3,7 +3,9 @@
  | || / _` / _| / / _ \/ _ \  _|
   \__/\__,_\__|_\_\___/\___/\__|
                                 
-Team members: Karl Villers - MPE
+Team members: 
+
+              Karl Villers - MPE
 
               Karl Rahn - ME
               
@@ -41,7 +43,7 @@ Documentation of Team Jackbot activites:
 \__ \/ -_) '_ \  _/ -_) '  \| '_ \/ -_) '_|
 |___/\___| .__/\__\___|_|_|_|_.__/\___|_|   
           |_|                               
-          
+
 During the first 2 weeks of September, we together messed with assembling LeBot, programmers studied the code and mechanics/electronics were soldering different wires
 
 1st September --- KarlR & KarlV 3h soldering battery connection wires. Nikita and Matis 3h were studying code and how to access the PC. 
@@ -61,13 +63,13 @@ During the first 2 weeks of September, we together messed with assembling LeBot,
 26th September --- KarlR 2h, worked on the design of the Ball Thrower. KarlV couldn't attend the lesson. Matis 3h was working on the camera threshold, Nikita 3h was helping him with it.
 
 29th September --- KarlR couldn't attend the day, though he improved the design at home approximately for 4h or so. KarlV 3h was helping Nikita and Matis for reviewing the work of motors.
-________________________________
+
   ___     _       _             
  / _ \ __| |_ ___| |__  ___ _ _ 
 | (_) / _|  _/ _ \ '_ \/ -_) '_|
  \___/\__|\__\___/_.__/\___|_|  
- _______________________________
-                                 
+
+
 3rd October --- KarlR 2h, improved the ball thrower. KarlV 3h worked on the camera position. Matis and Nikita 3h were trying to move the robot for the first time in action.
 
 6th October --- KarlR 3h, made some last edits for the ramp. KarlV reviewed the movement of LeBot, tightened the wheel bolts. Nikita and Matis 3h made the robot to follow the ball.    
@@ -116,13 +118,15 @@ ________________________________
 
 1st December --- 5h KarlR, 5h KarlV, 3h Matis, 3h Nikita. KarlR and KarlV printed the robot chassis details, Matis was improving the Omniwheels. KarlR was making a manufacture file for the milling of the JackBot. Nikita made some last improvements for the PCB and started working on firmware.
 
-5th December  --- 7h KarlR & KarlV, 4h Matis, 3.5h Nikita. PCB ready for ordering, milled and manufactured the whole new Bot. 
+5th December --- 7h KarlR & KarlV, 4h Matis, 3.5h Nikita. PCB ready for ordering, milled and manufactured the whole new Bot. 
 
 6th December --- 4h KarlR, KarlV and Matis. Painted the robot chassis parts with spray paint and sanded some parts. Melted the threads into the 3D printed parts, assembled the bot with old electronics, ready for movement.
 
 8th December --- 6h KarlR & KarlV & Matis, 4.5h Nikita. KarlR and Nikita worked on firmware, KarlV and Matis were working on the code. Qualified to the test competition first time with new bot and managed to achieve 2nd place. Got some points for the manufacturing and some electronics as well.
 
-12th December ---
+10th December --- Solo 4h Villers. Fixed code and made a video of the bot shooting balls towards basket.
+
+12th December --- 
 
 15th December ---
 
