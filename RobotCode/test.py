@@ -35,8 +35,7 @@ def main_loop():
     aimTolerance=20
 
     state = "stopped"
-    ref = OWOkood.Referee_cmd_client()
-    ref.open()
+    
     last_msg = ""
     name = "Jackbot"
 
@@ -46,11 +45,14 @@ def main_loop():
             time.sleep(1)
             processedData = processor.process_frame(aligned_depth=False)
             try:
-                print("balli y", processedData.balls[-1].y, "palli x", processedData.balls[-1].x, "Dist bal", processedData.balls[-1].distance)
+                #print("palli y:", processedData.balls[-1].y, ", palli x:", processedData.balls[-1].x, ", Dist bal", processedData.balls[-1].distance)
+                print(""processedData.basket_m.distance)
             except:
                 print("error")
+            
             try:
                 print(processedData.basket_b.distance)
+            
             except:
                 print("No basket")
 
@@ -66,3 +68,41 @@ def main_loop():
         #motion_sim2.close()
 
 main_loop()
+
+# oribitng with swerve
+#try:
+# 
+#                            tempbally = 0
+#                            closestbally = 0
+#                            closestballx = 0
+#                            for i in processedData.balls:
+#                                i.y = tempbally
+#                                if tempbally >= closestbally:
+#                                    closestbally = tempbally
+#                                    closestballx = i.x
+#
+#                            if closestballx > (middle_x + orbit_ball_tolerance):
+#                                print("Swerve RIGHT")
+#                                if slowtimer >= 1800:
+#                                    robot.swerve(closestballx,1)
+#                                    slowtimer = 0
+#                                else:
+#                                    print(speed_x,interesting_ball.distance,interesting_ball.x)
+#                                    robot.orbit(200, speed_x, ballY, ballX)
+#                                pass
+#
+#                            elif closestballx < (middle_x - orbit_ball_tolerance):
+#                                print("Swerve LEFT")
+#                                if slowtimer >= 1800:
+#                                    robot.swerve(closestballx,0)
+#                                    slowtimer = 0
+#                                else:
+#                                    print(speed_x,interesting_ball.distance,interesting_ball.x)
+#                                    robot.orbit(200, speed_x, ballY, ballX)
+#                                pass
+#                            else:        
+#                                print(speed_x,interesting_ball.distance,interesting_ball.x)
+#                                robot.orbit(200, speed_x, ballY, ballX)
+#                        except:
+#                            print(speed_x,interesting_ball.distance,interesting_ball.x)
+#                            robot.orbit(200, speed_x, ballY, ballX)

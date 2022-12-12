@@ -1,12 +1,12 @@
 import json, time, queue
 import multiprocessing as mp    
 import websocket as wsc
-name = "Jackbot"
+name = "jackbot"
 
 class Referee_cmd_client:
     def __init__(self):
-        self.ip = "192.168.3.220"
-        self.port = "8111"
+        self.ip = "192.168.3.35"
+        self.port = "8222"
         
         self.queue = mp.Queue()
       

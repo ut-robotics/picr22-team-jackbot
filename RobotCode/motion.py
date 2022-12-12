@@ -27,7 +27,7 @@ class IRobotMotion:
 class OmniMotionRobot(IRobotMotion):
     def __init__(self):
          # Wheel angles
-        self.motor_config = [120, 0, 240]
+        self.motor_config = [240, 0, 120]
         self.serialObj = serial.Serial()
         
     def open(self):
@@ -42,6 +42,7 @@ class OmniMotionRobot(IRobotMotion):
         self.serialObj.write(command)
     
     def move(self, robotSpeedX, robotSpeedY, rot_speed, shooter):
+        #, shooter
         speeds = [0, 0, 0]
         wheelDistanceFromCenter = 13  ##find out
         robotSpeed = math.sqrt(robotSpeedX * robotSpeedX + robotSpeedY * robotSpeedY)
