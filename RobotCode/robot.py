@@ -93,7 +93,6 @@ def findaball(processedData):
     global fasttimer
     print(" STATE: findball")
     ### robot tries to find ball
-    fasttimer += 1
     gofasttimer = 900
     slowdowntimer = 0
     ballseen = 0
@@ -101,7 +100,7 @@ def findaball(processedData):
         if processedData.balls:
             fasttimer = 0
             ballseen = 1 
-        if fasttimer >= 70:
+        if fasttimer >= 40:
             while slowdowntimer < 168:
                 motion_irl.move(0,0, int(12 + (slowdowntimer/6)),0)
                 slowdowntimer += 1
@@ -109,10 +108,10 @@ def findaball(processedData):
             while gofasttimer > 0:
                 motion_irl.move(0,0,40,0)
                 gofasttimer -= 1
-            fasttimer = 0
             while slowdowntimer > 0:
                 motion_irl.move(0,0, int(40 - (slowdowntimer/6)),0)
                 slowdowntimer -= 1
+            fasttimer = 0
         else:
             motion_irl.move(0,0,12,0) 
     except:

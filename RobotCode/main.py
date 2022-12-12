@@ -5,7 +5,18 @@ import cv2
 import time
 import robot
 import OWOkood
+import enum
+import Color
 
+class State(enum.Enum):
+    STOPPED = 0
+    FINDBALL = 1
+    GETCLOSE = 2
+    ORBIT = 3
+    MAKESHOT = 4
+
+
+    
 middle_x = 428
 ref_enable = False
 def main_loop():
@@ -24,15 +35,16 @@ def main_loop():
     orbit_ball_tolerance = 160
 
     if ref_enable == True:
-        state = "stopped"
+        state = State.STOPPED
         ref = OWOkood.Referee_cmd_client()
         ref.open()
     else:
-        state="findball"
+        state=State.FINDBALL
 
     last_msg = ""
     name = "jackbot"
-    targetBasket="magenta"
+
+    targetBasket=Color.Color.MAGENTA
 
     try:
         while True:
@@ -44,30 +56,28 @@ def main_loop():
                     msg = ref.get_cmd()
                     if msg != last_msg and msg != None:
                             
-                        print("Message:",msg["signal"],msg["targets"])
+                        print("Message:",msg)
                         last_msg = msg
-                        if name in msg["targets"]:
-                            if msg["signal"]=="start":
-                                if msg["targets"][1] == name:
-                                    print("GOGOGO",msg["baskets"][1])
-                                    targetBasket = msg["baskets"][1]
-                                    state="findball"
-                                elif msg["targets"][0] == name:
-                                    print("GOGOGO",msg["baskets"][0])
-                                    targetBasket = msg["baskets"][0]
-                                    state="findball"
+                        command_index = msg["targets"].index(name)
+                        if command_index > -1:
+                            command=msg["signal"]
+
+                            if command=="start":
+                                targetBasket = Color.Color.MAGENTA if msg["baskets"][command_index] == "magenta" else Color.Color.BLUE
+                                state=State.FINDBALL
+                            
                             else:
                                 print("STOOOOOP!")
-                                state = "stopped"
+                                state = State.STOPPED
                 except:    
                     print("no ref")
             
-            if targetBasket == "blue":
+            if targetBasket == Color.Color.BLUE:
                 ibasket = processedData.basket_b
             else:
                 ibasket = processedData.basket_m
-            # This is where you add the driving behaviour of your robot. It should be able to filter out
-            # objects of interest and calculate the required motion for reaching the objects
+            
+
             try:
                 ballX=processedData.balls[-1].x
                 ballY=processedData.balls[-1].y
@@ -84,40 +94,46 @@ def main_loop():
                 start = end
                 print("FPS: {}, framecount: {}".format(fps, frame_cnt))
                 print("ball_count: {}".format(len(processedData.balls)))
+                print("state:", state, state == State.FINDBALL)
                 #if (frame_cnt > 1000):
                 #    break
-
+            print("bfr debug")
             if debug:
                 debug_frame = processedData.debug_frame
                 cv2.imshow('debug', debug_frame)
                 k = cv2.waitKey(1) & 0xff
                 if k == ord('q'):
                     break
-
+            print("bfr len proc")
             try:
                 if len(processedData.balls)<0:
                     print("State:",state, "Ball X:",ballX,"Ball Y:", ballY )
             except:
                 pass
+            print("bfr stopped ")
 
-            if state == "stopped":
+            if state == State.STOPPED:
                 print("stopped")
                 time.sleep(0.5) 
                 continue
 
-            if state == "findball":
+            elif state == State.FINDBALL:
                 ### robot tries to find ball
                 try:
+                    print("fb1")
                     if len(processedData.balls)>0:
+                        print("fb2")
                         if ballX >= middle_x - 200 and ballX <= middle_x + 200:
                             ### robot found ball
-                            state = "getclose"
+                            print("fb3")
+                            state = State.GETCLOSE
+                    print("fb4")        
                     robot.findaball(processedData)
                 except:
                     print("findball error")
 
 
-            elif state == "getclose":
+            elif state == State.GETCLOSE:
                 ### ball found get close
                 try:
                     if ballY > 250:
@@ -127,15 +143,15 @@ def main_loop():
                                 robot.turn45()
                             else:    
                                 print("getclose->orbit")
-                                state = "orbit"
+                                state = State.ORBIT
                         except:
                                
                             print("getclose->orbit")
-                            state = "orbit"
+                            state = State.ORBIT
                         
                     elif len(processedData.balls) <= 0:
                         print("getclose->findball")
-                        state = "findball"
+                        state = State.FINDBALL
 
                     else:
                         print("robot.getclose",ballX,ballY)
@@ -145,10 +161,10 @@ def main_loop():
                     print("getclose error")
 
                 if len(processedData.balls) <= 0:
-                    state = "findball"
+                    state = State.FINDBALL
 
 
-            elif state == "makeshot":
+            elif state == State.MAKESHOT:
                 try:
                     try:
                         print("BASKET DISTANCE : ", ibasket.distance)
@@ -157,7 +173,7 @@ def main_loop():
                             if ibasket.distance < 700 and ibasket.distance>0:
                                 print("BASKET TOO CLOSE")
                                 robot.turn45()
-                                state="findball "
+                                state=State.FINDBALL
                         except:
                             pass
                     except:
@@ -173,7 +189,7 @@ def main_loop():
                     
                     if temptimer >= 155: # 170f
                         print("makeshoot->findball")
-                        state = "findball"
+                        state = State.FINDBALL
 
                     elif temptimer >= 55: # 90f
                         print("f")
@@ -185,7 +201,7 @@ def main_loop():
                     print("Makeshot error")
 
 
-            elif state == "orbit":
+            elif state == State.ORBIT:
                 try:
                     print("Orbiting")
                     try:
@@ -197,11 +213,11 @@ def main_loop():
                     if ibasket.x > middle_x - aimTolerance and ibasket.x < middle_x + aimTolerance:
                         print("making shot")
                         temptimer = 0
-                        state = "makeshot"
+                        state = State.MAKESHOT
 
-                    elif len(processedData.balls) <= 0 or ballY < 120:
+                    elif len(processedData.balls) <= 0 or ballY < 200:
                         print("Orbit: Ball lost. Finding new ball")
-                        state = "findball"
+                        state = State.FINDBALL
                     
                        
                     else:
@@ -214,7 +230,7 @@ def main_loop():
             else:
                 #orbit basics
                 if len(processedData.balls) == 0:
-                    state = "findball"
+                    state = State.FINDBALL
 
 
 
