@@ -239,7 +239,7 @@ class ImageProcessor():
             if depth is None:
                 obj_dst = obj_y
             else:
-                obj_dst = np.average(depth[obj_y-3:obj_y+3, obj_x-3:obj_x+3])
+                obj_dst = np.average(depth[8-3:8+3, obj_x-2:obj_x+2]) ## changed this
 
             baskets.append(Object(x = obj_x, y = obj_y, size = size, distance = obj_dst, exists = True))
 

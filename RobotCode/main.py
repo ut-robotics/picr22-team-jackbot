@@ -138,7 +138,7 @@ def main_loop():
                 try:
                     if ballY > 250:
                         try:
-                            if ibasket.distance < 700 and ibasket.distance>0:
+                            if ibasket.distance < 780 and ibasket.distance>0:
                                 print("BASKET TOO CLOSE!!!!")
                                 robot.turn45()
                             else:    
@@ -198,7 +198,7 @@ def main_loop():
                         print("BASKET DISTANCE : ", ibasket.distance)
                         print(ibasket.x)
                         try:
-                            if ibasket.distance < 700 and ibasket.distance>0:
+                            if ibasket.distance < 780 and ibasket.distance>0:
                                 print("BASKET TOO CLOSE")
                                 robot.turn45()
                                 print("makeshot->findball")

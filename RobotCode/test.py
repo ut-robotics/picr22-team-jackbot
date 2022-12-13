@@ -5,6 +5,51 @@ import cv2
 import time
 import robot
 import OWOkood
+import time
+middle_xbasket = 424
+motion_irl = motion.OmniMotionRobot()
+motion_irl.open()
+
+def makeshot(dist, basketx, timer):     
+    if dist <= 1450:
+        throwdistance = (dist) * 0.192307 + 360 ### 338 old 
+        print("Short shot")
+
+    elif dist > 1450 and dist < 3200:
+        throwdistance = (dist) * 0.15625 + 430 ### +400 last
+        print("Mid shot")
+    
+    else:
+        throwdistance = (dist) * 0.0952 + 620 ###bfr 590
+        print("Long shot")
+    ### old 0.18931 + 348.476439
+    print("1")
+    if timer == 2:
+        ### change rotation so 3rd para to change how agressively it turns
+        if basketx <= int(middle_xbasket)-1:### -1
+            print("2")
+            motion_irl.move(0,20,2,int(throwdistance))
+        elif basketx >= int(middle_xbasket)+1: ### +1
+            print("3")
+            motion_irl.move(0,20,-2,int(throwdistance))
+        else:
+            motion_irl.move(0,20,0,int(throwdistance))
+            print("4")
+    else:
+        if ballseen == 0:
+            if basketx <= middle_xbasket-1:### sec-1
+                motion_irl.move(0,-6,2,0)
+            elif basketx >= middle_xbasket+1:### sec+1
+                motion_irl.move(0,-6,-2,0)
+            else:
+                pass
+        else:
+            if basketx <= middle_xbasket-1: ### sec-1
+                motion_irl.move(0,0,2,0)
+            elif basketx >= middle_xbasket+1: ### sec+1
+                motion_irl.move(0,0,-2,0)
+            else:
+                pass
 
 middle_x = 435
 
@@ -41,12 +86,26 @@ def main_loop():
 
     try:
         while True:
+            
             # has argument aligned_depth that enables depth frame to color frame alignment. Costs performance
-            time.sleep(1)
-            processedData = processor.process_frame(aligned_depth=False)
+            time.sleep(0.5)
+            temptimer = 0
+            x = input("Wait insert 0 or 1: ")
             try:
-                #print("palli y:", processedData.balls[-1].y, ", palli x:", processedData.balls[-1].x, ", Dist bal", processedData.balls[-1].distance)
-                print(""processedData.basket_m.distance)
+                while x == 1:
+                    try:
+                        processedData = processor.process_frame(aligned_depth=False)
+                        if temptimer >= 55: # 90f
+                            print("f")
+                            robot.makeshot(processedData.basket_m.distance, processedData.basket_m.x, 2)
+                        if temptimer >= 5 and temptimer < 55: # 85sec
+                            robot.makeshot(processedData.basket_m.distance, processedData.basket_m.x, 1)
+                        temptimer += 1
+                        makeshot(processedData.basket_m.distance, processedData.basket_m.x, timer,)
+                        if temptimer >= 155:
+                            x = 0
+                    except:
+                        print("error overhere")
             except:
                 print("error")
             

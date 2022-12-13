@@ -1,5 +1,6 @@
 import numpy as np
 import motion
+import time ## ??
 
 
 
@@ -83,24 +84,23 @@ def findaball(processedData):
     global fasttimer     #BAD!!!!!!!!!!!!!
     print(" STATE: findball")
     ### robot tries to find ball
-    gofasttimer = 900
-    slowdowntimer = 0
+    gofasttimer = time.time() ##900
+    slowdowntimer = time.time()
+    slowdownTimes = 0.05 ##setbyhand and needs
     ballseen = 0
     try:
         if processedData.balls:
             fasttimer = 0
             ballseen = 1 
         if fasttimer >= 40:
-            while slowdowntimer < 168:
-                motion_irl.move(0,0, int(12 + (slowdowntimer/6)),0)
-                slowdowntimer += 1
-            slowdowntimer = 168
-            while gofasttimer > 0:
+            while slowdowntimer+slowdownTimes > time.time(): ##168
+                motion_irl.move(0,0, int(40 - ((slowdowntimer+slowdownTimes)-time.time())*(28/slowdownTimes)),0)
+            while gofasttimer+0.14 > time.time(): ## setbyhand
                 motion_irl.move(0,0,40,0)
                 gofasttimer -= 1
-            while slowdowntimer > 0:
-                motion_irl.move(0,0, int(40 - (slowdowntimer/6)),0)
-                slowdowntimer -= 1
+            while slowdowntimer+slowdownTimes > time.time():
+                motion_irl.move(0,0, int(12 + ((slowdowntimer+slowdownTimes)-time.time())*(28/slowdownTimes)),0)
+
             fasttimer = 0
         else:
             motion_irl.move(0,0,12,0) 
@@ -111,23 +111,22 @@ def findaball(processedData):
 
 
 def turn45(): # x ja left 0 : right 1
-    temptimer = 0
-    while temptimer <= 270:
-        motion_irl.move(0,-15,65,0)
-        temptimer += 1
+    temptimer = time.time()
+    while temptimer+0.075 >= time.time(): ## sekundites
+        motion_irl.move(0,0,28,0)
 
 
 def makeshot(dist, basketx, timer, ballseen):     
     if dist <= 1450:
-        throwdistance = (dist) * 0.192307 + 338 ### old 
+        throwdistance = (dist) * 0.192307 + 360 ### 338 old 
         print("Short shot")
 
     elif dist > 1450 and dist < 3200:
-        throwdistance = (dist) * 0.15625 + 400 ### +420 last
+        throwdistance = (dist) * 0.15625 + 430 ### +400 last
         print("Mid shot")
     
     else:
-        throwdistance = (dist) * 0.0952 + 590 ###bfr 590
+        throwdistance = (dist) * 0.0952 + 620 ###bfr 590
         print("Long shot")
     ### old 0.18931 + 348.476439
     print("1")
