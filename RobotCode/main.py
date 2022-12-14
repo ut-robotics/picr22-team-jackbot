@@ -27,6 +27,7 @@ def main_loop():
     frame_cnt = 0
     fps = 0
     cam = camera.RealsenseCamera(exposure = 100)
+    camera_y = cam.rgb_height ##480 atm
     processor = image_processor.ImageProcessor(cam, debug=debug)
     processor.start()
 
@@ -181,7 +182,7 @@ def main_loop():
                         temptimer = 0
                         state = State.MAKESHOT
 
-                    elif len(processedData.balls) <= 0 or ballY < 200:
+                    elif len(processedData.balls) <= 0 or ballY < camera_y*0.4166:
                         print("Orbit: Ball lost. Finding new ball")
                         state = State.FINDBALL
                     
@@ -211,7 +212,7 @@ def main_loop():
 
                     ballseen = 0
                     try:
-                        if ballY >= 250 and ballY <= 350:####second 310
+                        if ballY >= camera_y*0.5208 and ballY <= camera_y*0.7292:####second 310
                             ballseen = 1
                     except:
                         pass

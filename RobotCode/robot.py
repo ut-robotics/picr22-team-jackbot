@@ -1,8 +1,10 @@
 import numpy as np
 import motion
-import time ## ??
+import time
+import camera
 
-
+cam = camera.RealsenseCamera(exposure = 100)
+camera_y = cam.rgb_height ##480 atm
 
 class Robot():
     def __init__(self) -> None:
@@ -73,7 +75,7 @@ class Robot():
         Yslow = Y/6 #enne5.5
         ###MATIKUUT
         print("offcentre:", offcentre)
-        if offcentre <= 300 and offcentre >= -300 and Y < 200:
+        if offcentre <= 300 and offcentre >= -300 and Y < camera_y*0.4167:
             self.motion_irl.move(int(t_speed),int(60-(abs(t_speed))),int(-t_speed/3),0)
             print("Full speed")
         else:
@@ -118,11 +120,11 @@ class Robot():
 
     def makeshot(self, dist, basketx, timer, ballseen):     
         if dist <= 1450:
-            throwdistance = (dist) * 0.192307 + 360 ### 338 old 
+            throwdistance = (dist) * 0.192307 + 345 ### 338 old 
             print("Short shot")
 
         elif dist > 1450 and dist < 3200:
-            throwdistance = (dist) * 0.15625 + 430 ### +400 last
+            throwdistance = (dist) * 0.15625 + 415 ### +400 last
             print("Mid shot")
         
         else:

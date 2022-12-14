@@ -81,21 +81,24 @@ def main_loop():
             
             # has argument aligned_depth that enables depth frame to color frame alignment. Costs performance
             time.sleep(0.5)
+            processedData = processor.process_frame(aligned_depth=False)
             temptimer = 0
             x = input("Wait insert 0 or 1: ")
             try:
-                while x == 1:
+                while x == "1":
+                    print("x is : ", x, " temptimer is : ", temptimer)
+                    
                     try:
                         processedData = processor.process_frame(aligned_depth=False)
-                        if temptimer >= 55: # 90f
+                        if temptimer >= 200:
+                            x = "0"
+                        if temptimer >= 100: # 90f
                             print("f")
-                            robot.makeshot(processedData.basket_m.distance, processedData.basket_m.x, 2)
-                        if temptimer >= 5 and temptimer < 55: # 85sec
-                            robot.makeshot(processedData.basket_m.distance, processedData.basket_m.x, 1)
+                            makeshot(processedData.basket_m.distance, processedData.basket_m.x, 2)
+                        if temptimer >= 5 and temptimer < 100: # 85sec
+                            makeshot(processedData.basket_m.distance, processedData.basket_m.x, 1)
                         temptimer += 1
                         makeshot(processedData.basket_m.distance, processedData.basket_m.x)
-                        if temptimer >= 155:
-                            x = 0
                     except:
                         print("error overhere")
             except:
