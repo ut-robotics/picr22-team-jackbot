@@ -19,9 +19,9 @@ def main_loop():
     debug = False
     middle_x = 428
     ref_enable = False
-    orbit_max_speed = 60
-    aim_tolerance = 8
-    find_ball_tolerance = 200
+    orbit_max_speed = 70
+    aim_tolerance = 20
+    find_ball_tolerance = 220
 
     frame = 0
     frame_cnt = 0

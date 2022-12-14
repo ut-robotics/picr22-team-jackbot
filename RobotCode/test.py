@@ -36,20 +36,12 @@ def makeshot(dist, basketx, timer):
             motion_irl.move(0,20,0,int(throwdistance))
             print("4")
     else:
-        if ballseen == 0:
-            if basketx <= middle_xbasket-1:### sec-1
-                motion_irl.move(0,-6,2,0)
-            elif basketx >= middle_xbasket+1:### sec+1
-                motion_irl.move(0,-6,-2,0)
-            else:
-                pass
+        if basketx <= middle_xbasket-1: ### sec-1
+            motion_irl.move(0,0,2,0)
+        elif basketx >= middle_xbasket+1: ### sec+1
+            motion_irl.move(0,0,-2,0)
         else:
-            if basketx <= middle_xbasket-1: ### sec-1
-                motion_irl.move(0,0,2,0)
-            elif basketx >= middle_xbasket+1: ### sec+1
-                motion_irl.move(0,0,-2,0)
-            else:
-                pass
+            pass
 
 middle_x = 435
 
@@ -101,7 +93,7 @@ def main_loop():
                         if temptimer >= 5 and temptimer < 55: # 85sec
                             robot.makeshot(processedData.basket_m.distance, processedData.basket_m.x, 1)
                         temptimer += 1
-                        makeshot(processedData.basket_m.distance, processedData.basket_m.x, timer,)
+                        makeshot(processedData.basket_m.distance, processedData.basket_m.x)
                         if temptimer >= 155:
                             x = 0
                     except:

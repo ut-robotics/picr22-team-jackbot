@@ -7,7 +7,7 @@ import time ## ??
 class Robot():
     def __init__(self) -> None:
     
-        self.middle_xbasket = 424
+        self.middle_xbasket = 430
         self.fasttimer = 0
         self.prev_rad=250
         self.speed_y = 0
@@ -70,7 +70,7 @@ class Robot():
         offcentre = (X - middle_x)
         t_speed = (offcentre/10)
         ###MATIKOOT
-        Yslow = Y/5.5
+        Yslow = Y/6 #enne5.5
         ###MATIKUUT
         print("offcentre:", offcentre)
         if offcentre <= 300 and offcentre >= -300 and Y < 200:
