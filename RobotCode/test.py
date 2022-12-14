@@ -16,7 +16,7 @@ def makeshot(dist, basketx, timer):
         print("Short shot")
 
     elif dist > 1450 and dist < 3200:
-        throwdistance = (dist) * 0.15625 + 430 ### +400 last
+        throwdistance = (dist) * 0.15625 + 398 ### +400 last
         print("Mid shot")
     
     else:
@@ -103,7 +103,15 @@ def main_loop():
                         print("error overhere")
             except:
                 print("error")
-            
+            temptimer = 0
+            while x == "0":
+                if temptimer < 50:
+                    pass
+                if temptimer > 50:
+                    motion_irl.move(0,-20,0,0)
+                if temptimer >= 200:
+                    x = "2"
+                temptimer += 1
             try:
                 print(processedData.basket_b.distance)
             

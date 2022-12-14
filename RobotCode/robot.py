@@ -7,9 +7,9 @@ cam = camera.RealsenseCamera(exposure = 100)
 camera_y = cam.rgb_height ##480 atm
 
 class Robot():
-    def __init__(self) -> None:
+    def __init__(self, cam_middle = 430) -> None:
     
-        self.middle_xbasket = 430
+        self.middle_xbasket = cam_middle
         self.fasttimer = 0
         self.prev_rad=250
         self.speed_y = 0
@@ -124,7 +124,7 @@ class Robot():
             print("Short shot")
 
         elif dist > 1450 and dist < 3200:
-            throwdistance = (dist) * 0.15625 + 415 ### +400 last
+            throwdistance = (dist) * 0.15625 + 398 ### +400 last
             print("Mid shot")
         
         else:

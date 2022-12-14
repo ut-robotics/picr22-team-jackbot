@@ -17,7 +17,7 @@ class State(enum.Enum):
     
 def main_loop():
     debug = False
-    middle_x = 428
+    
     ref_enable = False
     orbit_max_speed = 70
     aim_tolerance = 20
@@ -33,7 +33,9 @@ def main_loop():
 
     start = time.time()
 
-    robot_logic = robot.Robot()
+    middle_x = cam.rgb_width * 0.505
+
+    robot_logic = robot.Robot(cam_middle = cam.rgb_width * 0.505)
 
 
     if ref_enable == True:
@@ -139,7 +141,7 @@ def main_loop():
             ### GET CLOSE TO THE BALL ###
             elif state == State.GETCLOSE:
                 try:
-                    if ballY > 250:
+                    if ballY > camera_y*0.5208:
                         try:
                             if ibasket.distance < 780 and ibasket.distance>0:
                                 print("BASKET TOO CLOSE!!!!")
