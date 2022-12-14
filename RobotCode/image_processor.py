@@ -53,33 +53,6 @@ class ImageProcessor():
     def __init__(self, camera, color_config = "colors/colors.pkl", debug = False):
         self.camera = camera
         
-#         ###
-#         while True:
-#             depth_frame = camera.align.get_depth_frame()###
-#             aligned_color_frame = aligned_frames.get_color_frame()###
-#             if not depth_frame or not aligned_color_frame: continue###
-#             
-#             ### over here            
-#             color_intrin = aligned_color_frame.profile.as_video_stream_profile().intrinsics
-#             depth_image = np.asanyarray(depth_frame.get_data())
-#             color_image = np.asanyarray(aligned_color_frame.get_data())
-#             #Use pixel value of  depth-aligned color image to get 3D axes
-#         ###
-
-        
-        blobparams = cv2.SimpleBlobDetector_Params()
-        blobparams.filterByArea = True
-        blobparams.minArea = 100
-        blobparams.maxArea = 80000
-        blobparams.filterByCircularity = False
-        #blobparams.minCircularity = 0.1
-        blobparams.minDistBetweenBlobs = 50
-        blobparams.filterByInertia = False
-        #blobparams.minInertiaRatio = 0.5
-        blobparams.filterByConvexity = False
-        #blobparams.minConvexity = 0.5
-
-        self.detector = cv2.SimpleBlobDetector_create(blobparams)
 
         self.color_config = color_config
         with open(self.color_config, 'rb') as conf:

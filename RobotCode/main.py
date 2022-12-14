@@ -32,6 +32,8 @@ def main_loop():
 
     start = time.time()
 
+    robot_logic = robot.Robot()
+
 
     if ref_enable == True:
         state = State.STOPPED
@@ -127,7 +129,7 @@ def main_loop():
                             ### robot found ball
                             state = State.GETCLOSE
                             print("findball->getclose")
-                    robot.findaball(processedData)
+                    robot_logic.findaball(processedData)
 
                 except:
                     print("findball error")
@@ -140,7 +142,7 @@ def main_loop():
                         try:
                             if ibasket.distance < 780 and ibasket.distance>0:
                                 print("BASKET TOO CLOSE!!!!")
-                                robot.turn45()
+                                robot_logic.turn45()
                             else:    
                                 print("getclose->orbit")
                                 state = State.ORBIT
@@ -154,7 +156,7 @@ def main_loop():
                         state = State.FINDBALL
 
                     else:
-                        robot.getclose(ballX,ballY,middle_x)
+                        robot_logic.getclose(ballX,ballY,middle_x)
 
                 except:
                     print("getclose error")
@@ -169,7 +171,7 @@ def main_loop():
                 try:
                     print("Orbiting")
                     try:
-                        speed_x = -robot.controller(ibasket.x, middle_x, x_scale=1500, y_scale=(orbit_max_speed - 5))
+                        speed_x = -robot_logic.controller(ibasket.x, middle_x, x_scale=1500, y_scale=(orbit_max_speed - 5))
                     except:
                         print("No basket")
                         speed_x = orbit_max_speed
@@ -184,8 +186,7 @@ def main_loop():
                         state = State.FINDBALL
                     
                     else:
-                        print(speed_x,ballY,ballX)
-                        robot.orbit(200, speed_x, ballY, ballX, middle_x)
+                        robot_logic.orbit(200, speed_x, ballY, ballX, middle_x)
 
                 except:
                     print("orbit error")
@@ -200,7 +201,7 @@ def main_loop():
                         try:
                             if ibasket.distance < 780 and ibasket.distance>0:
                                 print("BASKET TOO CLOSE")
-                                robot.turn45()
+                                robot_logic.turn45()
                                 print("makeshot->findball")
                                 state = State.FINDBALL
                         except:
@@ -221,9 +222,9 @@ def main_loop():
 
                     elif temptimer >= 55: # 90f
                         print("f")
-                        robot.makeshot(ibasket.distance, ibasket.x, 2, ballseen)
+                        robot_logic.makeshot(ibasket.distance, ibasket.x, 2, ballseen)
                     if temptimer >= 5 and temptimer < 55: # 85sec
-                        robot.makeshot(ibasket.distance, ibasket.x, 1, ballseen)
+                        robot_logic.makeshot(ibasket.distance, ibasket.x, 1, ballseen)
                     temptimer += 1
                 except:
                     print("Makeshot error")
