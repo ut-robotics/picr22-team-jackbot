@@ -1,3 +1,15 @@
+Schematic PDF and Gerber files can be found under the electronics folder
+
+Component list and info:
+
+Name | Designator | Quantity | Mouser order code
+
+
+
+
+
+
+
 Battery input:
 
 Two pads (+ and - of the battery) are connected to the VP1, reverse voltage protection BUK6Y10-30P. It is needed to prevent damage to power supplies and electronic circuits in the event of a reverse voltage applied at the input or output terminals.
