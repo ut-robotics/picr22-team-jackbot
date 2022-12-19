@@ -4,6 +4,24 @@ Component list and info:
 
 Name | Designator | Quantity | Mouser order code
 
+10uF | C1-C18 | 18 | 187-CL21X106KAYQNWE
+4.7uF | C19, C22, C30 | 3 | 
+1uF | C20, C23 | 2 | 
+100nF | C21, C24, C25, C26, C27, C28, C29, C33 | 8 | 
+FTSH-105-01-L-DV-K-TR | CN1 | 1 | 
+MAX14930DASE+ | I1, I2 | 2 | 
+215079-4 | J1,J2,J3,J4 | 4 | 
+LTST-C190GKT | LED1 | 1 | 
+PDRV8243HRXYQ1 | M1,M2,M3 | 3 | 
+STM32G441KBT6 | MC1 | 1 | 
+2.7k | R1,R4,R6 | 3 | 
+100k | R2,R3,R5 | 3 | 
+10k | R7 | 1 | 
+10118193-0001LF | U1 | 1 | 
+CM1223-02SO | U2 | 1 | 
+BUK6Y10-30P | VP1 | 1 | 
+NCP164CSN330T1G | VR1 | 1 | 
+NCV8730ASN500T1G | VR2 | 1 | 
 
 
 
