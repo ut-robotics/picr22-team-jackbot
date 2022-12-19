@@ -4,10 +4,10 @@ Component list and info:
 
 Name | Designator | Quantity | Mouser order code
 
-10uF | C1-C18 | 18 | 187-CL21X106KAYQNWE
-4.7uF | C19, C22, C30 | 3 | 
-1uF | C20, C23 | 2 | 
-100nF | C21, C24, C25, C26, C27, C28, C29, C33 | 8 | 
+10uF | C1-C18 | 18 | 187-CL21X106KAYQNWE					
+4.7uF | C19, C22, C30 | 3 | 					
+1uF | C20, C23 | 2 | 							
+100nF | C21, C24, C25, C26, C27, C28, C29, C33 | 8 | 							
 FTSH-105-01-L-DV-K-TR | CN1 | 1 | 
 MAX14930DASE+ | I1, I2 | 2 | 
 215079-4 | J1,J2,J3,J4 | 4 | 
