@@ -76,6 +76,10 @@ I1 and I2 are isolators MAX14930DASE+. They separate two sides of the PCB (the 1
 
 C25, C26, C27 and C28 are capacitors connected to the isolator power pins aligning the input voltage.
 
+_**5) connector pinouts**_
+Connector pinouts or in other words pads are for powering the motors. Each of the motors will have ground and voltage pads, in conclusion 6 pads, 2 for each motor. These pads are connected to the motor drivers to give exact instrcutions, when or what should be supplied with voltage. On the pads there will be soldered wires for connecting with bullet connections.
+
+
 [%hardbreaks]
 Footer
 © 2022 GitHub, Inc.
