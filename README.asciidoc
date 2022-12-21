@@ -131,11 +131,13 @@ During the first 2 weeks of September, we got together and messed with assemblin
 
 10th December --- Solo 4h Villers. Fixed code and made a video of the bot shooting balls towards basket.
 
-12th December --- 
+12th December --- 6h Had the last presentation, got to start working on the PCB, Villers and Matis were showcasing the bot to Allan for some programmers points. Karl and Nikita were working on the fresh PCB.
 
-15th December ---
+14th December --- 13h KarlR tried working with the PCB and coded some firmware.
 
-16th December ---
+15th December --- 9h KarlR tried working with the PCB and coded some firmware. KarlV and Matis were working on the code, Nikita was making solder fixes for the PCB.
 
-17th December ---
+16th December --- 6h KarlR,KarlV,Matis,Nikita, qualified for the money winning competition DeltaX, unfortunately our bot broken because one of the motor connectors got disconnected due to impact from another robot and got 5th place. KarlR managed to light up a LED on the new PCB and made some major changes in the firmware but unfortunately couldn't move a motor nor hear the second beep.
+
+17th December --- 4h KarlR and Nikita. Qualified for DeltaX competition, got our points, ate pizza and watched the code that our programmers had put together.
 
