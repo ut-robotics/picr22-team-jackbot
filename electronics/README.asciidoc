@@ -1,4 +1,4 @@
- ** NB! Schematic PDF and Gerber files can be found under the electronics folder **
+ **NB! Schematic PDF and Gerber files can be found under the electronics folder**
 
 
  __    __     ______     __     __   __     ______     ______     ______     ______     _____    
