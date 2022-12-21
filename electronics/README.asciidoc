@@ -86,7 +86,7 @@ LED1 is a LED connected to the controller. Its function is to see the state of t
 Programming input:
 
 CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate with MC1 microcontroller.
-
+|================================================================================================================================================================
 | Name                  	| Designator                      	| Quantity 	| Mouser order code    	| TME order code     	| Farnell order code 	|
 |-----------------------	|---------------------------------	|----------	|----------------------	|--------------------	|--------------------	|
 | 10uF                  	| C1-C18                          	| 18       	| 187-CL21X106KAYQNWE  	| C0805C106J8RACAUTO 	| 2118132            	|
@@ -107,7 +107,7 @@ CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate w
 | BUK6Y10-30P           	| VP1                             	| 1        	| 771-BUK6Y10-30PX     	| BUK6Y10-30PX       	| 3438512            	|
 | NCP164CSN330T1G       	| VR1                             	| 1        	| 863-NCP164CSN330T1G  	| NCP164CSN330T1G    	| 3367831            	|
 | NCV8730ASN500T1G      	| VR2                             	| 1        	| 863-NCP164CSN330T1G  	| -                  	| 3463974            	|
-
+|================================================================================================================================================================
 
 Footer
 © 2022 GitHub, Inc.
