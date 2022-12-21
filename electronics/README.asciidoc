@@ -35,10 +35,9 @@ _**Controller**_
 MC1 is a microcontroller STM32G441KBT6. It is the brain of the whole system. C21, C24, C29, C30, and C33 are capacitors that are connected to the microcontroller. They align the inputted 3.3V into the controller. LED1 is a LED connected to the controller. Its function is to see the state of the microcontroller just fast looking at the PCB.
 
 
-Programmers input:
+_**Programming input**_
 
-CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate with MC1 microcontroller.
-
+CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate with MC1 microcontroller and load the firmware code onto the board.
 
 
 
@@ -48,6 +47,7 @@ CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate w
  \ \_\ \ \_\  \ \_____\    \ \_\  \ \_____\  \ \_\ \_\     \ \____-  \ \_\ \_\  \ \_\  \ \__|    \ \_____\  \ \_\ \_\  \/\_____\ 
   \/_/  \/_/   \/_____/     \/_/   \/_____/   \/_/ /_/      \/____/   \/_/ /_/   \/_/   \/_/      \/_____/   \/_/ /_/   \/_____/ 
                                                                                                                                  
+
 
 
 _**Motor drivers**_
