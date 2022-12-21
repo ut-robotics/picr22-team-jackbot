@@ -135,7 +135,7 @@ During the first 2 weeks of September, we got together and messed with assemblin
 
 14th December --- 13h KarlR tried working with the PCB and coded some firmware.
 
-15th December --- 9h KarlR tried working with the PCB and coded some firmware. KarlV and Matis were working on the code, Nikita was making solder fixes for the PCB.
+15th December --- 9h KarlR tried working with the PCB and coded some firmware. 4h KarlV and Matis were working on the code and got some points, 4h Nikita was making solder fixes for the PCB.
 
 16th December --- 6h KarlR,KarlV,Matis,Nikita, qualified for the money winning competition DeltaX, unfortunately our bot broken because one of the motor connectors got disconnected due to impact from another robot and got 5th place. KarlR managed to light up a LED on the new PCB and made some major changes in the firmware but unfortunately couldn't move a motor nor hear the second beep.
 
