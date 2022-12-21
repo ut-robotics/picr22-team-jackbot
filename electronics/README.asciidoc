@@ -14,6 +14,8 @@ VR1 is a 5 Volt -> 3.3 Volt voltage regulator NCP164CSN330T1G. So as VR2, it con
 
 C19 and C20 are capacitors connected to the VR1 from the power side and from the output side aligning 5V that goes in and then 3.3V that goes out.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**2) USB**_
 
@@ -23,21 +25,28 @@ U1 is the connecting port for the USB it is needed for powering the microcontrol
 
 U2 is a USB protection. it is a diode array that provides ESD protection for electronic components or subsystems requiring minimal capacitive loading.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**3) Motor encoders**_
 
 J1, J2, J3, and J4 are motor encoders 215079-4. J1-J3 are for wheels, and J4 is for the thrower motor. They are needed to provide closed-loop feedback signals by tracking the speed and position of a motor shaft.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**4) Microcontroller**_
 
 MC1 is a microcontroller STM32G441KBT6. It is the brain of the whole system. C21, C24, C29, C30, and C33 are capacitors that are connected to the microcontroller. They align the inputted 3.3V into the controller. LED1 is a LED connected to the controller. Its function is to see the state of the microcontroller just fast looking at the PCB.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**5) Programming input**_
 
 CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate with MC1 microcontroller and load the firmware code onto the board.
 
+[%hardbreaks]
 [%hardbreaks]
  __    __     ______     ______   ______     ______        _____     ______     __     __   __   ______     ______     ______    
 /\ "-./  \   /\  __ \   /\__  _\ /\  __ \   /\  == \      /\  __-.  /\  == \   /\ \   /\ \ / /  /\  ___\   /\  == \   /\  ___\   
@@ -46,6 +55,8 @@ CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate w
   \/_/  \/_/   \/_____/     \/_/   \/_____/   \/_/ /_/      \/____/   \/_/ /_/   \/_/   \/_/      \/_____/   \/_/ /_/   \/_____/ 
                                                                                                                                  
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**1) Motor drivers**_
 
@@ -53,17 +64,23 @@ M1, M2 and M3 are motor drivers for wheels PDRV8243HRXYQ1. They act like an inte
 
 C1-C18 are the capacitors connected to the motor drivers (they should align the current from the 16 Volts of battery).
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**2) Battery input**_
 
 Two pads (+ and - of the battery) are connected to the VP1, reverse voltage protection BUK6Y10-30P. It is needed to prevent damage to power supplies and electronic circuits in the event of a reverse voltage applied at the input or output terminals.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**3) Voltage regulator 16V->5V**_
 
 VR2 is a 16 Volt -> 5 Volt voltage regulator NCV8730ASN500T1G. Its work is obvious - converting the 16 Volt from battery to 5 Volt which is needed for isolators.
 C22 and C23 are capacitors connected to the VR2 from the power side and from the output side aligning 16V that goes in and then 5V that goes out.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 _**4) Isolators**_
 
@@ -71,6 +88,8 @@ I1 and I2 are isolators MAX14930DASE+. They separate two sides of the PCB (the 1
 
 C25, C26, C27 and C28 are capacitors connected to the isolator power pins aligning the input voltage.
 
+[%hardbreaks]
+[%hardbreaks]
 [.lead]
 Footer
 © 2022 GitHub, Inc.
