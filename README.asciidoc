@@ -141,3 +141,43 @@ During the first 2 weeks of September, we got together and messed with assemblin
 
 17th December --- 4h KarlR and Nikita. Qualified for DeltaX competition, got our points, ate pizza and watched the code that our programmers had put together.
 
+
+Conclusion of the Course:
+
+Mechanics:
+Karl Rahn
+
+EXPERIENCE: During this course, I learned to use 3D printers and how to make designs in Autodesk Fusion360 and how to use the CNC machine. 
+
+DESIGN: 
+The only difference we had from other students was that our bot was less circular and had this tetrahedron entrance for the ballthrower in front of it. We also painted our robot and had some stickers on it to look more original and also made some cool wheel rims. 
+
+To be more specific about the process, then I'd just talk some parts through. I divided the robot to 4 different sections:
+
+1) Camera x PC x Battery holder - Initial idea was to make 3 in one design for these components, which I only managed like 2 in 1 and the battery holders separate. The only  thing why I wanted to put the battery holders separately was to make some circular rear light view as for like Nissan Skyline or so. The other part for the PC and Camera was the whole mount for those components: Camera is attached on the top plate, which had 20 degree angle and the PC has a plate where it can be mounted. The full mount can then be connected to the bottom plate of the body with bolts and dogbone connections.
+
+2) Omniwheel design and motor holders - Our predecessor (test robot: LeBot) had the metal rollers on its omniwheel and the wheels were quite small. For our team robot, I decided to make some nice wheels with some magic touch. I thought that there is a way to make floater rims so that you could actually see the design of the rim during driving the robot but I thought that I don't have to over engineer it, so I just made a regular rim which later was attached to the omniwheels.
+For the motor holders, we wanted to make a stance robot, which means that our omniwheels are under 5 degree angle. There are some ways to do that, but during the design of the motor holders, I wasn't thinking outside of the box. So I only made regular vertical motor holders with connection holes and the stator holer.
+
+3) Ball thrower - due to lack of time and inexperience on the electronics side, we thought that it is easier to make a regular thrower for the robot, just a regular ramp, 3D printed thick washer and walls for the thrower which we connected using spacers and bolts. The whole ball thrower can be slid in and out just by unscrewing the bolts from under the bot.
+
+4) Body x chassis - Designing a different body was a challenge for me. I learned so many new commands and ways how to mirror things and how to make loft bodies etc. The top and the bottom plate were cut out on the CNC (material: polycarbonate). Later we painted the top plate with some grey colour and then attached the 3D printed sides, where we melted in some threads and then connected these parts using bolts. Then we connected the camera mount and the wheel holders and the ballthrower onto the bottom plate using similar techniques. Then we had our electronic working on the cable management as we didn't have our own electronics ready. After finishing placing the components, we put on the top plate, by just sliding it between the camera mount and in the midtime we added the rear wheelguard as well. Everything was tight and stiff.
+
+Pros and Cons:
+
+Pros:
+We can gather several balls in front of us by just driving around which meant we could easily shoot many balls in very short time.
+Our design is unique, stands out from other bots.
+Very compact.
+No wires cannot be seen from the sides nor top.
+Lightweight.
+
+Cons:
+Hard to access the parts under the "hood".
+Took a lot of time to make the body as we had some 3D printable details that took around 12 hours to print.
+Smaller from other bots.
+Our camera thread was broken, which meant that the vibration of moving could easily de-adjust the camera.
+
+Personal comments:
+
+KarlR - I worked on the design part, as well a bit on firmware and electronics. Mostly I learned to use Fusion360 and 3D printing, but soldering with hot air and writing firmware was quite a new experience that I hadn't had before. During next time I wish I could only concentrate on 1 work only, cause some days I had to make allnighters in Delta. Also I wish I could understand the firmware a bit more as it was quite hard to do without any knowledge about the STM. I really liked that I had my own vision about the robot design and my teammates were happy about it. As well I could get some soldering skills and a bit of knowledge about the firmware writing as well although I didn't like staying at Delta all night to finish the firmware and the PCB soldering. For next year students, if you are a mechanic, consider talking with your teammates a lot and ask some questions about design, make paper sketches with pencil and try to implement these as soon as possible. The end of the semester will go very fast so I suggest working hard in the beginning of the semester, then it's more time to test the new robot in the other half of the semester and get some easy points done before every one else wants to show some tasks etc. If you are electronic, then just watch previous year PCB designs, they'll give a good overview about what needs to be on the PCB and in the schematic. As well I reccommend doing this in a 2 man team: 1st guy writes the firmware and 2nd one solders and designs the PCB. It's quite equal for the working hours. If you are a programmer, use a language that you know the most. Try using state machines, avoid hard coding and make the code run efficiently. Make some mathematical equations for calculating ball angles or orbiting. Get ready to make some allnighters in delta when new robot is fully ready.
