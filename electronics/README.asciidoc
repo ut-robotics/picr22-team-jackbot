@@ -85,10 +85,14 @@ Microcontroller pinout:
 
 PINS IN PICTURE:
 
-1 - VDD - power supply 
+1 - VDD - power supply
+[%hardbreaks]
 2 - PF0-OSC_in - LED output 
+[%hardbreaks]
 3 - PF1-OSC_OUT - none 
+[%hardbreaks]
 4 - PG10-NRST - NRST input 
+[%hardbreaks]
 5 - PA0 - Motor2 to PWM1 
 6 - PA1 - Motor2 to PWM2 
 7 - PA2 - Motor1 to PWM1 
