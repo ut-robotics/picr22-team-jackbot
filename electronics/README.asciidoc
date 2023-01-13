@@ -1,6 +1,7 @@
 Documentation for mainboard and motor drivers
 
 _** MAINBOARD **_
+
 _**1) Voltage regulator 5V(USB)->3.3V**_
 
 VR1 is a 5 Volt -> 3.3 Volt voltage regulator NCP164CSN330T1G. So as VR2, it converts voltages; however, VR1 charges all other components that need lower voltage.
