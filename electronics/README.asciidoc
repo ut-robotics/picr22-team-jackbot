@@ -38,7 +38,8 @@ _**5) Programming input**_
 
 CN1 is a Programmer connector FTSH-105-01-L-DV-K-TR. It is used to communicate with MC1 microcontroller and load the firmware code onto the board.
 
-[%hardbreaks]
+_**Motor side of the board**_
+
 _**1) Motor drivers**_
 
 M1, M2 and M3 are motor drivers for wheels PDRV8243HRXYQ1. They act like an interface between the motors and the control circuits. Since motors require a high amount of current and the controller circuit works on low-current signals, motor drivers take a low-current control signal and turn it into a higher-current signal that can drive motors.
