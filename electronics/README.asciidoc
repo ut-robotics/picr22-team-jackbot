@@ -80,3 +80,42 @@ C25, C26, C27 and C28 are capacitors connected to the isolator power pins aligni
 _**5) Connector pinouts**_
 
 Connector pinouts or in other words pads are for powering the motors. Each of the motors will have ground and voltage pads, in conclusion 6 pads, 2 for each motor. These pads are connected to the motor drivers to give exact instrcutions, when or what should be supplied with voltage. On the pads there will be soldered wires for connecting with bullet connections.
+
+Microcontroller pinout:
+
+PINS IN PICTURE:
+
+
+
+1 - VDD - power supply
+2 - PF0-OSC_in - LED output
+3 - PF1-OSC_OUT - none
+4 - PG10-NRST - NRST input
+5 - PA0 - Motor2 to PWM1
+6 - PA1 - Motor2 to PWM2
+7 - PA2 - Motor1 to PWM1
+8 - PA3 - Motor1 to PWM2
+9 - PA4 - Thrower to PWM
+10 - PA5 - none
+11 - PA6 - Motor3 to PWM1
+12 - PA7 - Motor3 to PWM2
+13 - PB0 - none
+14 - VSSA - ground connection
+15 - VDDA - power supply
+16 - VSS - ground connection
+17 - VDD - power supply
+18 - PA8 - Motor1 encoder1
+19 - PA9 - Motor1 encoder2
+20 - PA10 - none
+21 - PA11 - USB_DM
+22 - PA12 - USB_DP
+23 - PA13 - SYS_JTMS-SWDIO
+24 - PA14 - SYS-JTCK-SWCLK
+25 - PA15 - Motor3 encoder1
+26 - PB3 - none
+27 - PB4 - none
+28 - PB5 - NSLEEP output
+29 - PB6 - Motor2 encoder1
+30 - PB7 - Motor2 encoder2
+31 - PB8-BOOT0 - Motor3 encoder2
+32 - VSS - ground connection
