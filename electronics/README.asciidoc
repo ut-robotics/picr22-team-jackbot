@@ -1,6 +1,11 @@
 Documentation for mainboard and motor drivers
 
-_** MAINBOARD **_
+_**Introduction**_
+
+This PCB is meant for driving 3 Polulu motors and powering the BLDC motor (Thrower motor) through ESC. Due to that, it has a STM microcontroller for sending different info for each motor and receives info from user input via USB (Python code for our robot). The board needs 2 voltage sources, one for the microcontroller side and the second one for the motor drivers side. The motor side will have 16.8V driving the motors with current
+
+
+_** Mainboard **_
 
 _**1) Voltage regulator 5V(USB)->3.3V**_
 
