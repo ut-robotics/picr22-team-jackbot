@@ -179,9 +179,11 @@ Smaller from other bots.
 Our camera thread was broken, which meant that the vibration of moving could easily de-adjust the camera.
 
 Here are some pictures of my work in physical version:
-image::sunset.jpg[]
-image::sunset.jpg[]
-image::sunset.jpg[]
+image::IMG_20221212_161720.jpg[]
+
+image::IMG_20221212_161758.jpg[]
+
+image::IMG_20221212_162514.jpg[]
 
 Personal comments:
 
