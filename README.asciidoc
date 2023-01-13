@@ -144,7 +144,7 @@ During the first 2 weeks of September, we got together and messed with assemblin
 
 Conclusion of the Course:
 
-Mechanics:
+_**Mechanics:**_
 Karl Rahn
 
 EXPERIENCE: During this course, I learned to use 3D printers and how to make designs in Autodesk Fusion360 and how to use the CNC machine. 
@@ -163,7 +163,7 @@ For the motor holders, we wanted to make a stance robot, which means that our om
 
 4) Body x chassis - Designing a different body was a challenge for me. I learned so many new commands and ways how to mirror things and how to make loft bodies etc. The top and the bottom plate were cut out on the CNC (material: polycarbonate). Later we painted the top plate with some grey colour and then attached the 3D printed sides, where we melted in some threads and then connected these parts using bolts. Then we connected the camera mount and the wheel holders and the ballthrower onto the bottom plate using similar techniques. Then we had our electronic working on the cable management as we didn't have our own electronics ready. After finishing placing the components, we put on the top plate, by just sliding it between the camera mount and in the midtime we added the rear wheelguard as well. Everything was tight and stiff.
 
-Pros and Cons:
+_**Pros and Cons:**_
 
 Pros:
 We can gather several balls in front of us by just driving around which meant we could easily shoot many balls in very short time.
@@ -177,6 +177,11 @@ Hard to access the parts under the "hood".
 Took a lot of time to make the body as we had some 3D printable details that took around 12 hours to print.
 Smaller from other bots.
 Our camera thread was broken, which meant that the vibration of moving could easily de-adjust the camera.
+
+Here are some pictures of my work in physical version:
+image::sunset.jpg[]
+image::sunset.jpg[]
+image::sunset.jpg[]
 
 Personal comments:
 
