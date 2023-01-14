@@ -186,11 +186,34 @@ image::IMG_20221212_161758.jpg[]
 
 image::IMG_20221212_162514.jpg[]
 
-Personal comments:
+############
 
-KarlR - I worked on the design part, as well a bit on firmware and electronics. Mostly I learned to use Fusion360 and 3D printing, but soldering with hot air and writing firmware was quite a new experience that I hadn't had before. During next time I wish I could only concentrate on 1 work only, cause some days I had to make allnighters in Delta. Also I wish I could understand the firmware a bit more as it was quite hard to do without any knowledge about the STM. I really liked that I had my own vision about the robot design and my teammates were happy about it. As well I could get some soldering skills and a bit of knowledge about the firmware writing as well although I didn't like staying at Delta all night to finish the firmware and the PCB soldering. For next year students, if you are a mechanic, consider talking with your teammates a lot and ask some questions about design, make paper sketches with pencil and try to implement these as soon as possible. The end of the semester will go very fast so I suggest working hard in the beginning of the semester, then it's more time to test the new robot in the other half of the semester and get some easy points done before every one else wants to show some tasks etc. If you are electronic, then just watch previous year PCB designs, they'll give a good overview about what needs to be on the PCB and in the schematic. As well I reccommend doing this in a 2 man team: 1st guy writes the firmware and 2nd one solders and designs the PCB. It's quite equal for the working hours. If you are a programmer, use a language that you know the most. Try using state machines, avoid hard coding and make the code run efficiently. Make some mathematical equations for calculating ball angles or orbiting. Get ready to make some allnighters in delta when new robot is fully ready.
+_**Software:**_
 
-Matis - I mainly worked on programming part on the course at the start I had Nikitas help and at the end of the course I had Villers help me clean up, test and write new code and at busy times helped with robot assembly along Villers and Rahn after Rahn finished with CNC. Our robot had 5 different states which we ended up using "Enum"-s for which made the code a bit more clear looking. Our states were "Stopped","Findball","Getclose","Obit","Makeshot" the names should give a pretty accurate description of what these parts of code do. We ended up using cv2 - contours that were given in the premade code but I did test cv2 - blob detection but with the help of the instructors I ended scrapping it because it was just not as viable. Along cv2 we also used pyrealsense2 which was pregiven aswell I belive and time, numpy maybe even too much numpy at some places ? 
+############
+
+Matis Vahter
+
+Used libraries: cv2,time,numpy,pyrealsense2,enum,websocket,multiprocessing,math,tkinter,threading,serial,struct.
+
+States: Overall code structure was pretty messy before Villers cleanup arrived. Code wise most of our functions are in robot.py and the called into main to be used in the state machine. So are most important codes are main.py for compiling everything into one place and robot.py for most functions and motion.py for basic serial movement commands. OWOkood.py was copyed of OWO after talking it through with them. We wanted to give them some of our leftover points for the addition but they endedup getting their points togheter without our donation.
+
+#Insert block diagram.
+
+image::Schemes.png[]
+
+Short Anlysis:
+I think our moving logic could be improved by alot and we had plans to so but due to time limitation we cut off some of the ambition to do so. We should have also added some way of mapping out the balls and baskets to have a accurate understanding on the field. Our state machine wasnt necessarily bad could have used the more accurate understanding of whats on the field and where.
+
+
+
+_**Personal comments:**_
+
+_**KarlR:**_ - I worked on the design part, as well a bit on firmware and electronics. Mostly I learned to use Fusion360 and 3D printing, but soldering with hot air and writing firmware was quite a new experience that I hadn't had before. During next time I wish I could only concentrate on 1 work only, cause some days I had to make allnighters in Delta. Also I wish I could understand the firmware a bit more as it was quite hard to do without any knowledge about the STM. I really liked that I had my own vision about the robot design and my teammates were happy about it. As well I could get some soldering skills and a bit of knowledge about the firmware writing as well although I didn't like staying at Delta all night to finish the firmware and the PCB soldering. For next year students, if you are a mechanic, consider talking with your teammates a lot and ask some questions about design, make paper sketches with pencil and try to implement these as soon as possible. The end of the semester will go very fast so I suggest working hard in the beginning of the semester, then it's more time to test the new robot in the other half of the semester and get some easy points done before every one else wants to show some tasks etc. If you are electronic, then just watch previous year PCB designs, they'll give a good overview about what needs to be on the PCB and in the schematic. As well I reccommend doing this in a 2 man team: 1st guy writes the firmware and 2nd one solders and designs the PCB. It's quite equal for the working hours. If you are a programmer, use a language that you know the most. Try using state machines, avoid hard coding and make the code run efficiently. Make some mathematical equations for calculating ball angles or orbiting. Get ready to make some allnighters in delta when new robot is fully ready.
+
+####
+
+_**Matis:**_ - I mainly worked on programming part on the course at the start I had Nikitas help and at the end of the course I had Villers help me clean up, test and write new code and at busy times helped with robot assembly along Villers and Rahn after Rahn finished with CNC. Our robot had 5 different states which we ended up using "Enum"-s for which made the code a bit more clear looking. Our states were "Stopped","Findball","Getclose","Obit","Makeshot" the names should give a pretty accurate description of what these parts of code do. We ended up using cv2 - contours that were given in the premade code but I did test cv2 - blob detection but with the help of the instructors I ended scrapping it because it was just not as viable. Along cv2 we also used pyrealsense2 which was pregiven aswell I belive and time, numpy maybe even too much numpy at some places ? 
 
 image::a5f33fdd0c792b7dfb1d51c4c5b67e7e.png[]
 
