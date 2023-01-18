@@ -108,3 +108,5 @@ image::MC_pinout.JPG[]
 30 - PB7 - Motor2 encoder2 +
 31 - PB8-BOOT0 - Motor3 encoder2 + 
 32 - VSS - ground connection +
+
+
