@@ -117,7 +117,9 @@ image::IMG_20221212_162514.jpg[]
 
 _**Electronics:**_
 
+The components that were used are pretty standard for the course. We decided not to add anything different, which made the PCB design much more uncomplicated.
 
+Talking about the advantages and disadvantages of the PCB, first of all, let me say that it works. However, I think the PCB could be done better. And the major adjustment that I can think of is changing some of the pinouts of the STM32 since it was quite difficult to path the connections between the components sometimes because of the bad choice of the pinout at the beginning.
 
 image::scheme123.png[]
 
