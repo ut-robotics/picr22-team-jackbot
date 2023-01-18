@@ -32,27 +32,25 @@ Suggestions for instructors.
 == PROGRAMMING
 
 #### Used libraries: 
-* cv2
+* cv2 - Image processing
 
-* time
+* time - time
 
 * numpy - Calculations, image processing
 
 * pyrealsense2 - Configuring and using the RealSense 2 camera on the robot
 
-* enum
+* enum - states
 
-* websocket
+* websocket - ref commands
 
-* multiprocessing
+* multiprocessing - ref commands
 
-* math
+* math - averageing
 
-* tkinter
+* threading - ref comands
 
-* threading
-
-* serial
+* serial - 
 
 * struct
 
