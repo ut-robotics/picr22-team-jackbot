@@ -3,7 +3,7 @@
  | || / _` / _| / | _ \/ _ \  _|
   \__/\__,_\__|_\_|___/\___/\__|
                                 
-Team members: 
+### Team members: 
 
               Karl Villers - MPE
 
@@ -13,10 +13,12 @@ Team members:
               
               Nikita Kurenkov - PE
               
+### FUSION FILES:
+              
 https://gmail1315991.autodesk360.com/g/projects/20220905552790856/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uMTlSNUpCd09UQ1NRQ2FLUjZ3LUhLQQ==
 
 
-JACKBOT 3D MODEL LINK:
+### JACKBOT 3D MODEL LINK:
 
 https://gmail1315991.autodesk360.com/g/projects/20220905552790856/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uNVlTVUlSNFBSVC1kLWs1ZzJfdm1YUQ/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOmRLTUdwNVBqVG5HdG1pR251d0pleGc/viewer
 
@@ -26,6 +28,119 @@ What would you do differently next time?
 What did you like/did not like about the course/building a robot?
 Suggestions for next year students.
 Suggestions for instructors.
+
+== PROGRAMMING
+
+#### Used libraries: 
+* cv2
+
+* time
+
+* numpy - Calculations, image processing
+
+* pyrealsense2 - Configuring and using the RealSense 2 camera on the robot
+
+* enum
+
+* websocket
+
+* multiprocessing
+
+* math
+
+* tkinter
+
+* threading
+
+* serial
+
+* struct
+
+
+image::Schemes.png[]
+
+Matis Vahter
+
+States: Overall code structure was pretty messy before Villers cleanup arrived. Code wise most of our functions are in robot.py and the called into main to be used in the state machine. So are most important codes are main.py for compiling everything into one place and robot.py for most functions and motion.py for basic serial movement commands. OWOkood.py was copyed of OWO after talking it through with them. We wanted to give them some of our leftover points for the addition but they endedup getting their points togheter without our donation.
+
+
+Short Anlysis:
+I think our moving logic could be improved by alot and we had plans to so but due to time limitation we cut off some of the ambition to do so. We should have also added some way of mapping out the balls and baskets to have a accurate understanding on the field. Our state machine wasnt necessarily bad could have used the more accurate understanding of whats on the field and where.
+
+
+
+
+== MECHANICS
+
+_**Mechanics:**_
+Karl Rahn
+
+EXPERIENCE: During this course, I learned to use 3D printers and how to make designs in Autodesk Fusion360 and how to use the CNC machine. 
+
+DESIGN: 
+The only difference we had from other students was that our bot was less circular and had this tetrahedron entrance for the ballthrower in front of it. We also painted our robot and had some stickers on it to look more original and also made some cool wheel rims. 
+
+To be more specific about the process, then I'd just talk some parts through. I divided the robot to 4 different sections:
+
+1) Camera x PC x Battery holder - Initial idea was to make 3 in one design for these components, which I only managed like 2 in 1 and the battery holders separate. The only  thing why I wanted to put the battery holders separately was to make some circular rear light view as for like Nissan Skyline or so. The other part for the PC and Camera was the whole mount for those components: Camera is attached on the top plate, which had 20 degree angle and the PC has a plate where it can be mounted. The full mount can then be connected to the bottom plate of the body with bolts and dogbone connections.
+
+2) Omniwheel design and motor holders - Our predecessor (test robot: LeBot) had the metal rollers on its omniwheel and the wheels were quite small. For our team robot, I decided to make some nice wheels with some magic touch. I thought that there is a way to make floater rims so that you could actually see the design of the rim during driving the robot but I thought that I don't have to over engineer it, so I just made a regular rim which later was attached to the omniwheels.
+For the motor holders, we wanted to make a stance robot, which means that our omniwheels are under 5 degree angle. There are some ways to do that, but during the design of the motor holders, I wasn't thinking outside of the box. So I only made regular vertical motor holders with connection holes and the stator holer.
+
+3) Ball thrower - due to lack of time and inexperience on the electronics side, we thought that it is easier to make a regular thrower for the robot, just a regular ramp, 3D printed thick washer and walls for the thrower which we connected using spacers and bolts. The whole ball thrower can be slid in and out just by unscrewing the bolts from under the bot.
+
+4) Body x chassis - Designing a different body was a challenge for me. I learned so many new commands and ways how to mirror things and how to make loft bodies etc. The top and the bottom plate were cut out on the CNC (material: polycarbonate). Later we painted the top plate with some grey colour and then attached the 3D printed sides, where we melted in some threads and then connected these parts using bolts. Then we connected the camera mount and the wheel holders and the ballthrower onto the bottom plate using similar techniques. Then we had our electronic working on the cable management as we didn't have our own electronics ready. After finishing placing the components, we put on the top plate, by just sliding it between the camera mount and in before putting the plate on fully, we added the rear wheelguard as well. Everything was tight and stiff and locked with bolts.
+
+_**Pros and Cons:**_
+
+Pros:
+We can gather several balls in front of us by just driving around which meant we could easily shoot many balls in very short time.
+Our design is unique, stands out from other bots.
+Very compact.
+No wires cannot be seen from the sides nor top.
+Lightweight.
+
+Cons:
+Hard to access the parts under the "hood".
+Took a lot of time to make the body as we had some 3D printable details that took around 12 hours to print.
+Smaller from other bots.
+Our camera thread was broken, which meant that the vibration of moving could easily de-adjust the camera.
+
+Here are some pictures of my work in physical version:
+
+image::IMG_20221212_161720.jpg[]
+
+image::IMG_20221212_161758.jpg[]
+
+image::IMG_20221212_162514.jpg[]
+
+
+== ELEKTRONICS
+
+
+
+
+_**Personal comments:**_
+
+_**KarlR:**_ - I worked on the design part, as well a bit on firmware and electronics. Mostly I learned to use Fusion360 and 3D printing, but soldering with hot air and writing firmware was quite a new experience that I hadn't had before. During next time I wish I could only concentrate on 1 work only, cause some days I had to make allnighters in Delta. Also I wish I could understand the firmware a bit more as it was quite hard to do without any knowledge about the STM. I really liked that I had my own vision about the robot design and my teammates were happy about it. As well I could get some soldering skills and a bit of knowledge about the firmware writing as well although I didn't like staying at Delta all night to finish the firmware and the PCB soldering. For next year students, if you are a mechanic, consider talking with your teammates a lot and ask some questions about design, make paper sketches with pencil and try to implement these as soon as possible. The end of the semester will go very fast so I suggest working hard in the beginning of the semester, then it's more time to test the new robot in the other half of the semester and get some easy points done before every one else wants to show some tasks etc. If you are electronic, then just watch previous year PCB designs, they'll give a good overview about what needs to be on the PCB and in the schematic. As well I reccommend doing this in a 2 man team: 1st guy writes the firmware and 2nd one solders and designs the PCB. It's quite equal for the working hours. If you are a programmer, use a language that you know the most. Try using state machines, avoid hard coding and make the code run efficiently. Make some mathematical equations for calculating ball angles or orbiting. Get ready to make some allnighters in delta when new robot is fully ready.
+
+####
+
+_**Matis:**_ - I mainly worked on programming part on the course at the start I had Nikitas help and at the end of the course I had Villers help me clean up, test and write new code and at busy times helped with robot assembly along Villers and Rahn after Rahn finished with CNC. Our robot had 5 different states which we ended up using "Enum"-s for which made the code a bit more clear looking. Our states were "Stopped","Findball","Getclose","Obit","Makeshot" the names should give a pretty accurate description of what these parts of code do. We ended up using cv2 - contours that were given in the premade code but I did test cv2 - blob detection but with the help of the instructors I ended scrapping it because it was just not as viable. Along cv2 we also used pyrealsense2 which was pregiven aswell I belive and time, numpy maybe even too much numpy at some places ? 
+
+image::a5f33fdd0c792b7dfb1d51c4c5b67e7e.png[]
+
+For future students i recommend to start coding from the start and as new robot is being manufactured by the time the new robot is somewhat ready you should already have a pretty "okay" code ready that works with the original robot. Also you can explore around and use other methods of ball detection but I do recommend sticking with the stuff instructors have given you or atleast let them properly explain to you how to get the maximum out of that code before you go your own route. So cv2 image manipulation and so on to get the maximum out of your initial code. Also dont forget to always have one really good or multiple ways of checking distances and so on to make sure you have the right information to your robot. For connecting to the robot we used ssh since we wasted too much time trying to get the other stuff to work and ended up preffering the ssh anyways due to fps over anyother methods. Ssh is just the most simple way to go use that and when you have extra time you can try figuring something else out.
+
+
+
+
+
+
+
+
+
+
 
  ___ _        
  | _ (_)__ _ _ 
@@ -140,82 +255,3 @@ During the first 2 weeks of September, we got together and messed with assemblin
 16th December --- 6h KarlR,KarlV,Matis,Nikita, qualified for the money winning competition DeltaX, unfortunately our bot broken because one of the motor connectors got disconnected due to impact from another robot and got 5th place. KarlR managed to light up a LED on the new PCB and made some major changes in the firmware but unfortunately couldn't move a motor nor hear the second beep.
 
 17th December --- 4h KarlR and Nikita. Qualified for DeltaX competition, got our points, ate pizza and watched the code that our programmers had put together.
-
-
-Conclusion of the Course:
-
-_**Mechanics:**_
-Karl Rahn
-
-EXPERIENCE: During this course, I learned to use 3D printers and how to make designs in Autodesk Fusion360 and how to use the CNC machine. 
-
-DESIGN: 
-The only difference we had from other students was that our bot was less circular and had this tetrahedron entrance for the ballthrower in front of it. We also painted our robot and had some stickers on it to look more original and also made some cool wheel rims. 
-
-To be more specific about the process, then I'd just talk some parts through. I divided the robot to 4 different sections:
-
-1) Camera x PC x Battery holder - Initial idea was to make 3 in one design for these components, which I only managed like 2 in 1 and the battery holders separate. The only  thing why I wanted to put the battery holders separately was to make some circular rear light view as for like Nissan Skyline or so. The other part for the PC and Camera was the whole mount for those components: Camera is attached on the top plate, which had 20 degree angle and the PC has a plate where it can be mounted. The full mount can then be connected to the bottom plate of the body with bolts and dogbone connections.
-
-2) Omniwheel design and motor holders - Our predecessor (test robot: LeBot) had the metal rollers on its omniwheel and the wheels were quite small. For our team robot, I decided to make some nice wheels with some magic touch. I thought that there is a way to make floater rims so that you could actually see the design of the rim during driving the robot but I thought that I don't have to over engineer it, so I just made a regular rim which later was attached to the omniwheels.
-For the motor holders, we wanted to make a stance robot, which means that our omniwheels are under 5 degree angle. There are some ways to do that, but during the design of the motor holders, I wasn't thinking outside of the box. So I only made regular vertical motor holders with connection holes and the stator holer.
-
-3) Ball thrower - due to lack of time and inexperience on the electronics side, we thought that it is easier to make a regular thrower for the robot, just a regular ramp, 3D printed thick washer and walls for the thrower which we connected using spacers and bolts. The whole ball thrower can be slid in and out just by unscrewing the bolts from under the bot.
-
-4) Body x chassis - Designing a different body was a challenge for me. I learned so many new commands and ways how to mirror things and how to make loft bodies etc. The top and the bottom plate were cut out on the CNC (material: polycarbonate). Later we painted the top plate with some grey colour and then attached the 3D printed sides, where we melted in some threads and then connected these parts using bolts. Then we connected the camera mount and the wheel holders and the ballthrower onto the bottom plate using similar techniques. Then we had our electronic working on the cable management as we didn't have our own electronics ready. After finishing placing the components, we put on the top plate, by just sliding it between the camera mount and in before putting the plate on fully, we added the rear wheelguard as well. Everything was tight and stiff and locked with bolts.
-
-_**Pros and Cons:**_
-
-Pros:
-We can gather several balls in front of us by just driving around which meant we could easily shoot many balls in very short time.
-Our design is unique, stands out from other bots.
-Very compact.
-No wires cannot be seen from the sides nor top.
-Lightweight.
-
-Cons:
-Hard to access the parts under the "hood".
-Took a lot of time to make the body as we had some 3D printable details that took around 12 hours to print.
-Smaller from other bots.
-Our camera thread was broken, which meant that the vibration of moving could easily de-adjust the camera.
-
-Here are some pictures of my work in physical version:
-
-image::IMG_20221212_161720.jpg[]
-
-image::IMG_20221212_161758.jpg[]
-
-image::IMG_20221212_162514.jpg[]
-
-############
-
-_**Software:**_
-
-############
-
-Matis Vahter
-
-Used libraries: cv2,time,numpy,pyrealsense2,enum,websocket,multiprocessing,math,tkinter,threading,serial,struct.
-
-States: Overall code structure was pretty messy before Villers cleanup arrived. Code wise most of our functions are in robot.py and the called into main to be used in the state machine. So are most important codes are main.py for compiling everything into one place and robot.py for most functions and motion.py for basic serial movement commands. OWOkood.py was copyed of OWO after talking it through with them. We wanted to give them some of our leftover points for the addition but they endedup getting their points togheter without our donation.
-
-#Insert block diagram.
-
-image::Schemes.png[]
-
-Short Anlysis:
-I think our moving logic could be improved by alot and we had plans to so but due to time limitation we cut off some of the ambition to do so. We should have also added some way of mapping out the balls and baskets to have a accurate understanding on the field. Our state machine wasnt necessarily bad could have used the more accurate understanding of whats on the field and where.
-
-
-
-_**Personal comments:**_
-
-_**KarlR:**_ - I worked on the design part, as well a bit on firmware and electronics. Mostly I learned to use Fusion360 and 3D printing, but soldering with hot air and writing firmware was quite a new experience that I hadn't had before. During next time I wish I could only concentrate on 1 work only, cause some days I had to make allnighters in Delta. Also I wish I could understand the firmware a bit more as it was quite hard to do without any knowledge about the STM. I really liked that I had my own vision about the robot design and my teammates were happy about it. As well I could get some soldering skills and a bit of knowledge about the firmware writing as well although I didn't like staying at Delta all night to finish the firmware and the PCB soldering. For next year students, if you are a mechanic, consider talking with your teammates a lot and ask some questions about design, make paper sketches with pencil and try to implement these as soon as possible. The end of the semester will go very fast so I suggest working hard in the beginning of the semester, then it's more time to test the new robot in the other half of the semester and get some easy points done before every one else wants to show some tasks etc. If you are electronic, then just watch previous year PCB designs, they'll give a good overview about what needs to be on the PCB and in the schematic. As well I reccommend doing this in a 2 man team: 1st guy writes the firmware and 2nd one solders and designs the PCB. It's quite equal for the working hours. If you are a programmer, use a language that you know the most. Try using state machines, avoid hard coding and make the code run efficiently. Make some mathematical equations for calculating ball angles or orbiting. Get ready to make some allnighters in delta when new robot is fully ready.
-
-####
-
-_**Matis:**_ - I mainly worked on programming part on the course at the start I had Nikitas help and at the end of the course I had Villers help me clean up, test and write new code and at busy times helped with robot assembly along Villers and Rahn after Rahn finished with CNC. Our robot had 5 different states which we ended up using "Enum"-s for which made the code a bit more clear looking. Our states were "Stopped","Findball","Getclose","Obit","Makeshot" the names should give a pretty accurate description of what these parts of code do. We ended up using cv2 - contours that were given in the premade code but I did test cv2 - blob detection but with the help of the instructors I ended scrapping it because it was just not as viable. Along cv2 we also used pyrealsense2 which was pregiven aswell I belive and time, numpy maybe even too much numpy at some places ? 
-
-image::a5f33fdd0c792b7dfb1d51c4c5b67e7e.png[]
-
-For future students i recommend to start coding from the start and as new robot is being manufactured by the time the new robot is somewhat ready you should already have a pretty "okay" code ready that works with the original robot. Also you can explore around and use other methods of ball detection but I do recommend sticking with the stuff instructors have given you or atleast let them properly explain to you how to get the maximum out of that code before you go your own route. So cv2 image manipulation and so on to get the maximum out of your initial code. Also dont forget to always have one really good or multiple ways of checking distances and so on to make sure you have the right information to your robot. For connecting to the robot we used ssh since we wasted too much time trying to get the other stuff to work and ended up preffering the ssh anyways due to fps over anyother methods. Ssh is just the most simple way to go use that and when you have extra time you can try figuring something else out.
-
