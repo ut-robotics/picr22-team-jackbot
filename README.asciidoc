@@ -115,7 +115,17 @@ image::IMG_20221212_162514.jpg[]
 
 == ELEKTRONICS
 
+_**Electronics:**_
 
+
+
+image::scheme123.png[]
+
+image::scheme321.png[]
+
+image::PCBsolder1.jpg[]
+
+image::PCBsolder2.jpg[]
 
 
 == PERSONAL COMMENTS
