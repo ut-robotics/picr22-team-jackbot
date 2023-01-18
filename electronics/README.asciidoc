@@ -2,9 +2,9 @@ Documentation for mainboard and motor drivers
 
 _**Introduction**_
 
-This PCB is meant for driving 3 DC motors (in our robot we are driving Polulu DC motors) and powering the BLDC motor (Thrower motor) through ESC. Due to that, it has a STM microcontroller for sending different info for each motor and receives info from user input via USB (Python code for our robot). The board needs 2 voltage sources, one for the microcontroller side and the second one for the motor drivers side. The motor side will have 16.8V driving the motors with stall current of 5.5A for each motor. The motors can withstand 16.8V max and the motor drivers should be capable of limiting the current as well between the stall current and the power of 12W for each motor.
+This PCB is meant for driving 3 DC motors (in our robot we are driving Polulu DC motors) and powering the BLDC motor (Thrower motor) through ESC. Due to that, it has a STM microcontroller for sending different info for each motor and receives info from user input via USB (Python code for our robot). The board needs 2 voltage sources, one for the microcontroller side and the second one for the motor drivers side. The motor side will have the recommended 16.8V of voltage which will then power each driver. Following the regulations for each ITRIP Pin, S_ITRIP Register Bits and the 100Kohm resistor which we have in schematic then the outcome will be 2.64V for each motordriver. With that we can calculate the Amps for each motor. Following the calculations in the datasheet, we have to do the following: Divide our voltage in motor driver with the resistor which the IPROPI is connected and the multiply the value with A(IPROPI). The outcome should come around 3A for each motor. 2.64V/2700R*3070 = 3A. Although the maximum voltage for our circuit can be 25V as well, as we are using 25V capacitors, but we will not be needing so much of it.
 
-In the following, there is more specific description for each component and in the end you can find the microcontroller pinout with a picture.
+In the following, there is more specific description for each component and in the end you can find the micro controller pinout with a picture.
 
 _** Mainboard **_
 
