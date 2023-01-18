@@ -123,9 +123,9 @@ image::scheme123.png[]
 
 image::scheme321.png[]
 
-image::PCBsolder1.jpg[]
-
 image::PCBsolder2.jpg[]
+
+image::PCBsolder1.jpg[]
 
 
 == PERSONAL COMMENTS
