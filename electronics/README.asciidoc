@@ -70,9 +70,9 @@ _**5) Connector pinouts**_
 
 Connector pinouts or in other words pads are for powering the motors. Each of the motors will have ground and voltage pads, in conclusion 6 pads, 2 for each motor. These pads are connected to the motor drivers to give exact instrcutions, when or what should be supplied with voltage. On the pads there will be soldered wires for connecting with bullet connections.
 
-_**6) Microcontroller pinout **_
+_**6) Pinouts **_
 
-Pinout of microcontroller in picture:
+Pinout of micro controller:
 
 image::MC_pinout.JPG[]
 
@@ -109,4 +109,14 @@ image::MC_pinout.JPG[]
 31 - PB8-BOOT0 - Motor3 encoder2 + 
 32 - VSS - ground connection +
 
+Pinout of programmers input:
 
+image::JB_programmer.JPG[]
+
+Pinout of motor encoders:
+
+image::JB_encoders.JPG[]
+
+Pinout of thrower motor:
+
+image::JB_thrower.JPG[]
