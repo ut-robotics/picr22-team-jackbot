@@ -1,0 +1,16 @@
+== How to run robot
+
+* Open RobotCode folder
+
+### If you wan't referee commands:
+
+* change ``ref_enable = True`` in main.py
+* open OWOkood.py
+* change ``name = "name of robot"``
+* change ``self.ip`` and ``self.port`` to referees ip and port
+* run main.py
+
+### Else:
+
+* change ``ref_enable = False`` in main.py
+* run main.py
