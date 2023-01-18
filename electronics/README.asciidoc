@@ -2,7 +2,7 @@ Documentation for mainboard and motor drivers
 
 _**Introduction**_
 
-This PCB is meant for driving 3 Polulu motors and powering the BLDC motor (Thrower motor) through ESC. Due to that, it has a STM microcontroller for sending different info for each motor and receives info from user input via USB (Python code for our robot). The board needs 2 voltage sources, one for the microcontroller side and the second one for the motor drivers side. The motor side will have 16.8V driving the motors with stall current of 5.5A for each motor. The motors can withstand 16.8V max and the motor drivers should be capable of limiting the current as well between the stall current and the power of 12W for each motor.
+This PCB is meant for driving 3 DC motors (in our robot we are driving Polulu DC motors) and powering the BLDC motor (Thrower motor) through ESC. Due to that, it has a STM microcontroller for sending different info for each motor and receives info from user input via USB (Python code for our robot). The board needs 2 voltage sources, one for the microcontroller side and the second one for the motor drivers side. The motor side will have 16.8V driving the motors with stall current of 5.5A for each motor. The motors can withstand 16.8V max and the motor drivers should be capable of limiting the current as well between the stall current and the power of 12W for each motor.
 
 In the following, there is more specific description for each component and in the end you can find the microcontroller pinout with a picture.
 
