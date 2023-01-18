@@ -139,6 +139,16 @@ I didn't like how badly informed we were. Even at the end of the course we were 
 
 I'd suggest reorganizing the course website so that information could actually be found.
 
+####
+
+_**Nikita:**_ - I mostly worked on the electronics part, especially the PCB design. At the beginning of the course, I did some programming, but later, I switched to the electronics part as I had some experience with PCB design.
+
+As it turned out, it was not that easy, and thus it was still challenging to do the PCB. However, it was possible with the help of teachers.
+
+During this course, I learned a lot about electronics, especially PCB design.
+
+For next year's students, I would strongly advise one thing - do not hesitate to ask for help or advice if you do not understand something.
+
 
 
 
