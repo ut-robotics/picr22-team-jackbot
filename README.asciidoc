@@ -1,5 +1,5 @@
 == How to run robot
-
+* Use Python 3.9 
 * Open RobotCode folder
 
 ### If you wan't referee commands:
