@@ -1,0 +1,46 @@
+
+== How to set up
+
+=== Image processing
+
+Image processing based on bootcamp programming repository https://github.com/ut-robotics/picr22-boot-camp-programming
+
+Segmentation module installation:
+```
+cd segment_module
+pip3.9 install .
+```
+
+Running color configurator:
+```
+mkdir colors
+touch colors/colors.pkl
+python3.9 config_colors.py
+```
+
+=== Dependencies
+
+* Use Python 3.9 
+
+Install the following:
+
+* evdev - 1.6.0
+* numpy - 1.23.3
+* pyrealsense2 - 2.51.1.4348
+* pyserial - 3.5
+* websocket-client - 1.4.1
+
+== Running
+
+=== If you wan't referee commands:
+
+* change ``ref_enable = True`` in main.py
+* open OWOkood.py
+* change ``name = "name of robot"``
+* change ``self.ip`` and ``self.port`` to referees ip and port
+* run main.py
+
+=== Else:
+
+* change ``ref_enable = False`` in main.py
+* run main.py
