@@ -1,3 +1,28 @@
+Refer to bootcamp code https://github.com/ut-robotics/picr22-boot-camp-programming
+
+== How to use
+
+Segmentation module installation:
+```
+cd segment_module
+pip3.9 install .
+```
+
+Running color configurator:
+```
+mkdir colors
+touch colors/colors.pkl
+python3.9 config_colors.py
+```
+
+Running an example:
+```
+python3.9 main.py
+```
+
+If you encounter dependency errors, resolve them with pip3.9
+
+
 == How to run robot
 * Use Python 3.9 
 * Open RobotCode folder
