@@ -1,6 +1,8 @@
 == How to run robot
 * Use Python 3.9 
 * Open RobotCode folder
+
+== Install the following
 * evdev - 1.6.0
 * numpy - 1.23.3
 * pyrealsense2 - 2.51.1.4348
