@@ -2,8 +2,6 @@ This is an example implementation of a LUT based segmentation module that can be
 
 Designed to use Python 3. Dependencies: numpy, openCV, pyrealsense2
 
-This code is heavily inspired by [Mitupead - football robot](https://github.com/lwd8cmd/Mitupead)
-
 ## Modules in the code
 
 ### Color.py
