@@ -1,0 +1,281 @@
+     _         _   ___      _   
+  _ | |__ _ __| |_| _ ) ___| |_ 
+ | || / _` / _| / | _ \/ _ \  _|
+  \__/\__,_\__|_\_|___/\___/\__|
+                                
+### Team members: 
+
+              Karl Villers - MPE
+
+              Karl Rahn - ME
+              
+              Matis Vahter - P
+              
+              Nikita Kurenkov - PE
+              
+### JACKBOT 3D MODEL LINK:
+
+https://a360.co/3ZN1Nvg
+
+On which parts of the robot did you work on?
+What did you learn?
+What would you do differently next time?
+What did you like/did not like about the course/building a robot?
+Suggestions for next year students.
+Suggestions for instructors.
+
+== PROGRAMMING
+
+#### Used libraries: 
+* cv2 - Image processing
+
+* time - time
+
+* numpy - Calculations, image processing
+
+* pyrealsense2 - Configuring and using the RealSense 2 camera on the robot
+
+* enum - states
+
+* websocket - ref commands
+
+* multiprocessing - ref commands
+
+* math - averageing
+
+* threading - ref comands
+
+* serial - 
+
+* struct
+
+
+image::Schemes.png[]
+
+Matis Vahter
+
+States: Overall code structure was pretty messy before Villers cleanup arrived. Code wise most of our functions are in robot.py and the called into main to be used in the state machine. So are most important codes are main.py for compiling everything into one place and robot.py for most functions and motion.py for basic serial movement commands. OWOkood.py was copyed of OWO after talking it through with them. We wanted to give them some of our leftover points for the addition but they endedup getting their points togheter without our donation.
+
+
+Short Anlysis:
+I think our moving logic could be improved by alot and we had plans to so but due to time limitation we cut off some of the ambition to do so. We should have also added some way of mapping out the balls and baskets to have a accurate understanding on the field. Our state machine wasnt necessarily bad could have used the more accurate understanding of whats on the field and where.
+
+
+
+
+== MECHANICS
+
+_**Mechanics:**_
+Karl Rahn
+
+EXPERIENCE: During this course, I learned to use 3D printers and how to make designs in Autodesk Fusion360 and how to use the CNC machine. 
+
+DESIGN: 
+The only difference we had from other students was that our bot was less circular and had this tetrahedron entrance for the ballthrower in front of it. We also painted our robot and had some stickers on it to look more original and also made some cool wheel rims. 
+
+To be more specific about the process, then I'd just talk some parts through. I divided the robot to 4 different sections:
+
+1) Camera x PC x Battery holder - Initial idea was to make 3 in one design for these components, which I only managed like 2 in 1 and the battery holders separate. The only  thing why I wanted to put the battery holders separately was to make some circular rear light view as for like Nissan Skyline or so. The other part for the PC and Camera was the whole mount for those components: Camera is attached on the top plate, which had 20 degree angle and the PC has a plate where it can be mounted. The full mount can then be connected to the bottom plate of the body with bolts and dogbone connections.
+
+2) Omniwheel design and motor holders - Our predecessor (test robot: LeBot) had the metal rollers on its omniwheel and the wheels were quite small. For our team robot, I decided to make some nice wheels with some magic touch. I thought that there is a way to make floater rims so that you could actually see the design of the rim during driving the robot but I thought that I don't have to over engineer it, so I just made a regular rim which later was attached to the omniwheels.
+For the motor holders, we wanted to make a stance robot, which means that our omniwheels are under 5 degree angle. There are some ways to do that, but during the design of the motor holders, I wasn't thinking outside of the box. So I only made regular vertical motor holders with connection holes and the stator holer.
+
+3) Ball thrower - due to lack of time and inexperience on the electronics side, we thought that it is easier to make a regular thrower for the robot, just a regular ramp, 3D printed thick washer and walls for the thrower which we connected using spacers and bolts. The whole ball thrower can be slid in and out just by unscrewing the bolts from under the bot.
+
+4) Body x chassis - Designing a different body was a challenge for me. I learned so many new commands and ways how to mirror things and how to make loft bodies etc. The top and the bottom plate were cut out on the CNC (material: polycarbonate). Later we painted the top plate with some grey colour and then attached the 3D printed sides, where we melted in some threads and then connected these parts using bolts. Then we connected the camera mount and the wheel holders and the ballthrower onto the bottom plate using similar techniques. Then we had our electronic working on the cable management as we didn't have our own electronics ready. After finishing placing the components, we put on the top plate, by just sliding it between the camera mount and in before putting the plate on fully, we added the rear wheelguard as well. Everything was tight and stiff and locked with bolts.
+
+_**Pros and Cons:**_
+
+Pros:
+We can gather several balls in front of us by just driving around which meant we could easily shoot many balls in very short time.
+Our design is unique, stands out from other bots.
+Very compact.
+No wires cannot be seen from the sides nor top.
+Lightweight.
+
+Cons:
+Hard to access the parts under the "hood".
+Took a lot of time to make the body as we had some 3D printable details that took around 12 hours to print.
+Smaller from other bots.
+Our camera thread was broken, which meant that the vibration of moving could easily de-adjust the camera.
+
+Here are some pictures of my work in physical version:
+
+image::IMG_20221212_161720.jpg[]
+
+image::IMG_20221212_161758.jpg[]
+
+image::IMG_20221212_162514.jpg[]
+
+
+== ELEKTRONICS
+
+_**Electronics:**_
+
+The components that were used are pretty standard for the course. We decided not to add anything different, which made the PCB design much more uncomplicated.
+
+Talking about the advantages and disadvantages of the PCB, first of all, let me say that it works. However, I think the PCB could be done better. And the major adjustment that I can think of is changing some of the pinouts of the STM32 since it was quite difficult to path the connections between the components sometimes because of the bad choice of the pinout at the beginning.
+
+image::scheme123.png[]
+
+image::scheme321.png[]
+
+image::PCBsolder2.jpg[]
+
+image::PCBsolder1.jpg[]
+
+
+== PERSONAL COMMENTS
+
+_**KarlR:**_ - I worked on the design part, as well a bit on firmware and electronics. Mostly I learned to use Fusion360 and 3D printing, but soldering with hot air and writing firmware was quite a new experience that I hadn't had before. During next time I wish I could only concentrate on 1 work only, cause some days I had to make allnighters in Delta. Also I wish I could understand the firmware a bit more as it was quite hard to do without any knowledge about the STM. I really liked that I had my own vision about the robot design and my teammates were happy about it. As well I could get some soldering skills and a bit of knowledge about the firmware writing as well although I didn't like staying at Delta all night to finish the firmware and the PCB soldering. For next year students, if you are a mechanic, consider talking with your teammates a lot and ask some questions about design, make paper sketches with pencil and try to implement these as soon as possible. The end of the semester will go very fast so I suggest working hard in the beginning of the semester, then it's more time to test the new robot in the other half of the semester and get some easy points done before every one else wants to show some tasks etc. If you are electronic, then just watch previous year PCB designs, they'll give a good overview about what needs to be on the PCB and in the schematic. As well I reccommend doing this in a 2 man team: 1st guy writes the firmware and 2nd one solders and designs the PCB. It's quite equal for the working hours. If you are a programmer, use a language that you know the most. Try using state machines, avoid hard coding and make the code run efficiently. Make some mathematical equations for calculating ball angles or orbiting. Get ready to make some allnighters in delta when new robot is fully ready.
+
+####
+
+_**Matis:**_ - I mainly worked on programming part on the course at the start I had Nikitas help and at the end of the course I had Villers help me clean up, test and write new code and at busy times helped with robot assembly along Villers and Rahn after Rahn finished with CNC. Our robot had 5 different states which we ended up using "Enum"-s for which made the code a bit more clear looking. Our states were "Stopped","Findball","Getclose","Obit","Makeshot" the names should give a pretty accurate description of what these parts of code do. We ended up using cv2 - contours that were given in the premade code but I did test cv2 - blob detection but with the help of the instructors I ended scrapping it because it was just not as viable. Along cv2 we also used pyrealsense2 which was pregiven aswell I belive and time, numpy maybe even too much numpy at some places ? 
+
+image::a5f33fdd0c792b7dfb1d51c4c5b67e7e.png[]
+
+For future students i recommend to start coding from the start and as new robot is being manufactured by the time the new robot is somewhat ready you should already have a pretty "okay" code ready that works with the original robot. Also you can explore around and use other methods of ball detection but I do recommend sticking with the stuff instructors have given you or atleast let them properly explain to you how to get the maximum out of that code before you go your own route. So cv2 image manipulation and so on to get the maximum out of your initial code. Also dont forget to always have one really good or multiple ways of checking distances and so on to make sure you have the right information to your robot. For connecting to the robot we used ssh since we wasted too much time trying to get the other stuff to work and ended up preffering the ssh anyways due to fps over anyother methods. Ssh is just the most simple way to go use that and when you have extra time you can try figuring something else out.
+
+_**KarlV:**_ - I started off in mechanics/electronics but quicly moved on to programming. I dealt with assemblyng the robot and cut out the wheel thingys.
+I learnt a lot of programming. 
+
+Next time i'd start to harass the instructors earlyer. Our progress was really slow at first because we didnt know what we were doing. Once we discovered that we can get help from the instructors, our progress gained a lot of speed.
+
+I didn't like how badly informed we were. Even at the end of the course we were still discovering things that would have been of great help at the beginning of the course.
+
+I'd suggest reorganizing the course website so that information could actually be found.
+
+####
+
+_**Nikita:**_ - I mostly worked on the electronics part, especially the PCB design. At the beginning of the course, I did some programming, but later, I switched to the electronics part as I had some experience with PCB design.
+
+As it turned out, it was not that easy, and thus it was still challenging to do the PCB. However, it was possible with the help of teachers.
+
+During this course, I learned a lot about electronics, especially PCB design.
+
+For next year's students, I would strongly advise one thing - do not hesitate to ask for help or advice if you do not understand something.
+
+
+
+
+
+
+
+
+
+
+
+ ___ _        
+ | _ (_)__ _ _ 
+ |  _/ / _| '_|
+ |_| |_\__|_|  
+  ___ __ ___ ___ 
+ |_  )  \_  )_  )
+  / / () / / / / 
+ /___\__/___/___|           
+ ___ _    ___   ___ 
+ | _ ) |  / _ \ / __|
+ | _ \ |_| (_) | (_ |
+ |___/____\___/ \___|
+ 
+                     
+Documentation of Team Jackbot activites:
+
+ ___           _             _             
+/ __| ___ _ __| |_ ___ _ __ | |__  ___ _ _                            
+\__ \/ -_) '_ \  _/ -_) '  \| '_ \/ -_) '_|
+|___/\___| .__/\__\___|_|_|_|_.__/\___|_|   
+          |_|                               
+
+During the first 2 weeks of September, we got together and messed with assembling LeBot, programmers studied the code and mechanics/electronics were soldering different wires
+
+1st September --- KarlR & KarlV 3h soldering battery connection wires. Nikita and Matis 3h were studying code and how to access the PC. 
+
+5th September --- KarlR & KarlV 3h finished soldering wires, started assembling LeBot chassis and electronics. Matis and Nikita were working on the code already, making some 
+
+9th September --- KarlR & KarlV 3h Finished assembling LeBot. Matis and Nikita were able to move the wheel motors for the first time.
+
+12th September --- KarlR 2h started learing tools of Autodesk Fusion360. KarlV 3h was working on robot, tightening bolts and making sure that the pcbs will stay on the robot. Nikita and Matis 3h managed to move all the 3 wheels.
+
+15th September --- KarlR 3h, managed to get his hands on Autodesk licence, making first sketches, still watching tutorials and LeBots designs. KarlV found some errors for the assemble, took it apart, fixed a soldering. Nikita and Matis were editing the code, making a structure for it.
+
+19th September --- KarlR 3h, started making the Ball Thrower, taking measures from the ball and motor. KarlV 3h assembled the robot again and checked if more errors can be found. Matis and Nikita were able to move the 3 motors again and tried moving the thrower motor as well. 
+
+22nd September --- KarlR 3h, worked on the design of the Ball Thrower. KarlV 3h, did some wire management, which meant that robot had to be disassembled again. Matis 3h was working on the camera thresholding, Nikita couldn't come that day.
+
+26th September --- KarlR 2h, worked on the design of the Ball Thrower. KarlV couldn't attend the lesson. Matis 3h was working on the camera threshold, Nikita 3h was helping him with it.
+
+29th September --- KarlR couldn't attend the day, though he improved the design at home approximately for 4h or so. KarlV 3h was helping Nikita and Matis for reviewing the work of motors.
+
+  ___     _       _             
+ / _ \ __| |_ ___| |__  ___ _ _ 
+| (_) / _|  _/ _ \ '_ \/ -_) '_|
+ \___/\__|\__\___/_.__/\___|_|  
+
+
+3rd October --- KarlR 2h, improved the ball thrower. KarlV 3h worked on the camera position. Matis and Nikita 3h were trying to move the robot for the first time in action.
+
+6th October --- KarlR 3h, made some last edits for the ramp. KarlV reviewed the movement of LeBot, tightened the wheel bolts. Nikita and Matis 3h made the robot to follow the ball.    
+
+10th October --- KarlR 2h, tried to print out the parts for ball thrower. KarlV assembled the parts and then tested the thrower with Matis and Nikita (3h). Turned out that the ramp's angle was too steep, which meant that new ramp should be made.  
+
+13th October --- KarlR 3h, tried fixing the ramp's angle, improved the thrower a bit and found out that it's better to use a miller for manufacturing the ramp. KarlV and programming team was trying to work with the printed ramp (3h).  
+
+17th October --- KarlR 3h made the manufacturing model ready, although he couldn't mill out the updated thrower due to queue to the milling machine. KarlV couldn't attend the day. Matis and Nikita 3h were making some major changes to the code to run smoother.
+
+20th October --- Karl 3h fixed the design, fixed the manufacturing model and the thrower should be milled out next time. KarlV 3h was helping to measure some distances with Nikita and Matis. 
+
+24th October --- Karl 3h fixed the design of the ball thrower and managed to mill out the new parts for the ball thrower. KarlV with Nikita and Matis 3h tested the new ramp and was working quite okay.    
+
+27th October --- KarlR 4h started making new robot, the JackBot 1.0. KarlV 3h worked on the equation for the motor to throw the balls (made statistics). Matis and Nikita assisted him during his time at the school.
+
+31st October --- KarlR 2h made motor holders ready, started making some wheel designs. KarlV, Matis, Nikita were trying to make some code improvements for orbiting and moving around.
+
+ _  _                   _             
+| \| |_____ _____ _ __ | |__  ___ _ _ 
+| .` / _ \ V / -_) '  \| '_ \/ -_) '_|
+|_|\_\___/\_/\___|_|_|_|_.__/\___|_|  
+                                       
+                                       
+3rd November --- KarlR started making camera holder design, had some ides for omniwheel designs. KarlV started making programming, changing most of the code to universal. Matis and Nikita were missing that day.
+
+7th November --- 2h KarlR improved omniwheel design, improved camera holder design, started making JackBot 1.0 chassis design with KarlV's given measurements. 3h KarlV was working on orbiting problem, Matis worked on thresholding, Nikita was studying home for a big test.
+
+10th November --- 5h KarlR made some major design improvements for the whole new robot and asked some instructions from the instructors and teachers. KarlV 5h worked mainly on the code with Matis and also tried to qualify with the robot. Nikita was studying some of the schematics things with KarlR 3h.  
+
+14th November --- 5h KarlR finished making the first prototype design for the robot, maybe needs some modifying. 3h KarlV and Matis were working on the programming and movement, made a new equation for the ball throwing. 2h Nikita was studying the code made by Matis and Karl
+
+17th November --- 6h KarlR made some minor changes for the new robot, started making electronics schematic and made some component symbols and footprints, teached Nikita how to do things in Altium (although Nikita was more familiar with easyEDA so KarlR suggested him using that platform). KarlV and
+
+21st November --- KarlR 6h, KarlV 6h, Nikita 3h, Matis 4h: KarlR improved the design of the JackBot, almost ready for manufacturing, Nikita started making a design of schematic (improved KarlR's scheme), Matis improved the equations for throwing the ball, KarlV milled out motor mounts and approved the orbiting code.                
+
+24th November --- KarlR 5h printed out the wheels and made a beautyrim, as well printed out the battery holders. 3h KarlV and Matis were trying to fix the orbiting problem for the robot. Nikita 4h improved the schematic with KarlR advice.
+
+28th November --- 6h KarlR, 6h KarlV, 3h Matis, 3h Nikita. KarlR edited the chassis design. Villers holed and threaded wheel mounts, Matis disassembled LeBot and assembled new OmniWheels for JackBot. Nikita made major changes for PCB and schematic. 
+
+ ___                   _             
+|   \ ___ __ ___ _ __ | |__  ___ _ _ 
+| |) / -_) _/ -_) '  \| '_ \/ -_) '_|
+|___/\___\__\___|_|_|_|_.__/\___|_|  
+                                      
+
+1st December --- 5h KarlR, 5h KarlV, 3h Matis, 3h Nikita. KarlR and KarlV printed the robot chassis details, Matis was improving the Omniwheels. KarlR was making a manufacture file for the milling of the JackBot. Nikita made some last improvements for the PCB and started working on firmware.
+
+5th December --- 7h KarlR & KarlV, 4h Matis, 3.5h Nikita. PCB ready for ordering, milled and manufactured the whole new Bot. 
+
+6th December --- 4h KarlR, KarlV and Matis. Painted the robot chassis parts with spray paint and sanded some parts. Melted the threads into the 3D printed parts, assembled the bot with old electronics, ready for movement.
+
+8th December --- 6h KarlR & KarlV & Matis, 4.5h Nikita. KarlR and Nikita worked on firmware, KarlV and Matis were working on the code. Qualified to the test competition first time with new bot and managed to achieve 2nd place. Got some points for the manufacturing and some electronics as well.
+
+10th December --- Solo 4h Villers. Fixed code and made a video of the bot shooting balls towards basket.
+
+12th December --- 6h Had the last presentation, got to start working on the PCB, Villers and Matis were showcasing the bot to Allan for some programmers points. Karl and Nikita were working on the fresh PCB.
+
+14th December --- 13h KarlR tried working with the PCB and coded some firmware.
+
+15th December --- 9h KarlR tried working with the PCB and coded some firmware. 4h KarlV and Matis were working on the code and got some points, 4h Nikita was making solder fixes for the PCB.
+
+16th December --- 6h KarlR,KarlV,Matis,Nikita, qualified for the money winning competition DeltaX, unfortunately our bot broken because one of the motor connectors got disconnected due to impact from another robot and got 5th place. KarlR managed to light up a LED on the new PCB and made some major changes in the firmware but unfortunately couldn't move a motor nor hear the second beep.
+
+17th December --- 4h KarlR and Nikita. Qualified for DeltaX competition, got our points, ate pizza and watched the code that our programmers had put together.
